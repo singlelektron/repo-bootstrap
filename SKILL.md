@@ -8,7 +8,7 @@ description: Initialize a runnable software repository or adopt an existing one 
 Deliver a small working project and a sustainable handoff for an AI-first solo
 owner. Documentation alone is not completion. Keep the project's language,
 framework, and existing conventions; choose the simplest stack when none exists.
-Use the owner's preferred language for human documents; default to Chinese.
+Use English for human-facing documents unless the owner explicitly requests another language.
 
 ## 1. Inspect and establish scope
 
@@ -69,6 +69,9 @@ or adapting documents. Use [templates](assets/templates/) as editing starting
 points, not overwrite operations. Replace every `{{UPPER_SNAKE_CASE}}` token,
 remove adaptation comments and irrelevant optional sections, and write concrete
 commands/examples. Keep existing documents and merge only authorized gaps.
+Templates are authored in English. When the owner requests another output
+language, translate human-facing content and update heading anchors and links to
+match. Keep agent instructions and technical reference materials in accurate English.
 
 The standard output is `README.md`, `AGENTS.md`, `docs/PRODUCT.md`,
 `docs/OWNER_GUIDE.md`, `.github/pull_request_template.md`, and appropriate CI.
@@ -131,7 +134,7 @@ in the handoff; do not require GitHub setup to finish useful local work.
 
 ## 5. Complete a concrete handoff
 
-Report in the owner's language:
+Report in English unless the owner explicitly requests another language:
 
 - Implemented behavior and how to run and verify it without reading source.
 - Actual commands/results, risk level, failures, limits, and unresolved decisions.

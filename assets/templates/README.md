@@ -1,15 +1,15 @@
-<!-- Adapt to the real project and owner's language. Resolve all tokens, remove this comment and omit unsupported sections. Preserve existing documentation when adopting. -->
+<!-- Adapt to the real project. Default to English unless the owner explicitly requests another language. Resolve tokens, remove this comment, and omit unsupported sections. Update heading anchors when translating. Preserve existing documentation when adopting. -->
 # {{PROJECT_NAME}}
 
 {{PROJECT_SUMMARY}}
 
-当前可用：{{SUPPORTED_BEHAVIOR}}。
+Currently supported: {{SUPPORTED_BEHAVIOR}}.
 
-## 安装与运行
+## Installation and running
 
-需要：{{PREREQUISITES}}。
+Requirements: {{PREREQUISITES}}.
 
-在 {{RUN_CONTEXT}} 执行：
+Run from {{RUN_CONTEXT}}:
 
 ```sh
 {{INSTALL_COMMANDS}}
@@ -18,12 +18,12 @@
 
 {{FIRST_RUN_EXPECTATION}}
 
-## 使用与参与
+## Usage and contributing
 
-- [日常使用、验证和排查](docs/OWNER_GUIDE.md)
-- [已确认的需求与待决定事项](docs/PRODUCT.md)
-- [开发流程和检查命令](AGENTS.md)
+- [Daily use, verification, and troubleshooting](docs/OWNER_GUIDE.md)
+- [Approved requirements and open decisions](docs/PRODUCT.md)
+- [Development workflow and checks](AGENTS.md)
 
-## 当前限制
+## Current limitations
 
 {{CURRENT_LIMITATIONS}}

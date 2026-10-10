@@ -19,7 +19,7 @@ If implementation contradicts an approved requirement, report the discrepancy an
 
 ## Adapt, preserve, and maintain
 
-The files under `assets/templates/` are writing aids, not a mandatory renderer or replacement operation. Inspect existing content first. Merge only missing useful guidance, preserve established rules, and explain substantive conflicts before replacing them. Adapt paths, language, commands, and optional sections to the real project. Resolve every `{{UPPER_SNAKE_CASE}}` token and remove adaptation comments and inapplicable sections from generated documents. Human-facing documents default to Chinese unless the owner prefers another language.
+The files under `assets/templates/` are English writing aids, not a mandatory renderer or replacement operation. Inspect existing content first. Merge only missing useful guidance, preserve established rules, and explain substantive conflicts before replacing them. Adapt paths, commands, and optional sections to the real project. Resolve every `{{UPPER_SNAKE_CASE}}` token and remove adaptation comments and inapplicable sections from generated documents. Human-facing documents default to English unless the owner explicitly prefers another language; when translating them, update heading anchors and links as well. Keep agent instructions and technical references in accurate English.
 
 Prefer editing a relevant existing document. Create a document only if someone will need it after this task. Keep entry documents readable in a short sitting; length is a judgment, not a hard threshold. Do not require every document to be read for a trivial change. Update documents when the behavior, command, decision or rule they describe changes, rather than on every commit.
 

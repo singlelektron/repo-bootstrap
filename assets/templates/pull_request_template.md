@@ -1,38 +1,38 @@
-<!-- Adaptation note: this is a reusable PR form, not a report of the bootstrap task. Remove this note; retain useful Chinese field hints. When writing an actual PR, fill from evidence and omit inapplicable fields. -->
-## 给项目负责人的说明
+<!-- Adaptation note: this is a reusable PR form, not a report of the bootstrap task. Remove this note; retain useful field hints. Default to English unless the owner explicitly requests another language. When writing an actual PR, fill from evidence and omit inapplicable fields. -->
+## Human Review
 
-**改了什么、为什么：**
+**What changed, and why:**
 
-<!-- 简述本次变化及其解决的问题。 -->
+<!-- Explain the change and the problem it solves. -->
 
-**现在能观察到什么：**
+**What is now observable or usable:**
 
-<!-- 描述负责人能够看到或使用的新行为。 -->
+<!-- Describe behavior the owner can see or use. -->
 
-**如何验收：**
+**How the owner can verify it:**
 
-<!-- 写出输入、操作和预期结果；关联 PRODUCT 的验收条件。界面变化可附真实截图，CLI/后端给可运行示例，库给最小公开 API 示例。 -->
+<!-- Give inputs, steps, and expected results; reference PRODUCT acceptance criteria. Use actual screenshots for UI changes, runnable commands for CLI/backend changes, or a minimal public API example for libraries. -->
 
-**剩余风险或限制：**
+**Remaining risks or limitations:**
 
-**需要产品决定吗：**
+**Owner product decision needed:**
 
-<!-- 明确写出无需决定，或待负责人批准的具体选择。 -->
+<!-- State that none is needed, or identify the concrete decision awaiting approval. -->
 
-## 技术验证
+## Technical Verification
 
-- 风险等级及理由：
-- 对应提交：
-- 关键实现与涉及模块：
-- 新增或修改的测试：
-- 兼容性、数据迁移或恢复事项：
+- Risk level and reason:
+- Revision covered:
+- Important implementation details and affected modules:
+- Tests added or changed:
+- Compatibility, migration, or recovery considerations:
 
-| 实际执行的命令 | 实际结果及证据 |
+| Commands actually executed | Actual results and evidence |
 | --- | --- |
 |  |  |
 
-- CI：
-- 失败、跳过及未验证的假设：
-- 高风险所需的恢复演练、人工技术审查或其他批准：
+- CI:
+- Failures, skipped checks, and unverified assumptions:
+- Recovery rehearsals, qualified human technical review, or approvals needed for high-risk changes:
 
-<!-- 未观察到真实 CI 运行时，填写“未运行/未验证”；不可写“通过”。AI 审查只是补充。高风险变化缺少必要验证或批准时保持草稿，列出缺口。 -->
+<!-- Write "not run/unverified" unless an actual CI run was observed; do not claim it passed. AI review is supplemental. Keep high-risk changes in draft while necessary verification or approvals are missing, and identify the gaps. -->

@@ -8,6 +8,10 @@ this repository or apply a sample project's product requirements here.
 Keep instructions concise, language-agnostic and self-contained after handoff.
 Preserve user authorization boundaries. Change templates and instructions together
 when their actual behavior changes; avoid duplicate policy sources.
+Keep this repository's README bilingual in English and Chinese. Author all other
+agent/maintainer documentation and template sources in accurate English. Generated
+human-facing project documentation defaults to English unless the owner explicitly
+requests another language. Preserve non-English test data needed to verify Unicode.
 
 Work on a task branch after the initial bootstrap commit. Commit only task changes.
 Run `python3 -m unittest discover -s tests -v`; run the available official skill

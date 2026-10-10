@@ -1,4 +1,4 @@
-<!-- Adapt paths, commands, boundaries and language; resolve tokens, remove this comment and optional sections. Merge with existing instructions instead of replacing them. -->
+<!-- Adapt paths, commands, and boundaries; resolve tokens, remove this comment and optional sections. Keep agent instructions in English. Merge with existing instructions instead of replacing them. -->
 # Agent instructions
 
 ## Sources of truth
@@ -9,6 +9,8 @@
 - This file: agent workflow and validation commands. Lasting technical decisions belong in existing architecture/decision records only when complexity warrants them.
 
 Read the documents relevant to the task; a trivial change does not require reading everything. If these sources disagree, identify the conflict and preserve approved requirements.
+Write human-facing documentation in English unless the owner explicitly requests
+another language. Keep agent instructions and technical reference materials in English.
 
 ## Work and Git
 
