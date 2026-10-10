@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Bootstrap"
+  short_description: "Bootstrap runnable repos with owner-reviewable checks"
+  default_prompt: "Use $repo-bootstrap to initialize or adopt this project with a working baseline and concise owner handoff."
