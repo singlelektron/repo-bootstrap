@@ -81,9 +81,11 @@ class BootstrapValidatorTests(unittest.TestCase):
         self.git("add", ".")
         self.git("-c", "user.name=Test", "-c", "user.email=test@example.invalid", "commit", "-qm", "existing history")
         self.write("README.md", "# Existing owner rules\nOwner's edited usage and acceptance criteria stay exactly as written.\n")
-        before = self.snapshot()
         status = self.git("status", "--porcelain")
         head = self.git("rev-parse", "HEAD")
+        # Git status may refresh cached stat data in the index; finish setup
+        # before taking the byte-for-byte baseline for the validator itself.
+        before = self.snapshot()
         code, _ = self.run_validator()
         self.assertEqual(code, 0)
         self.assertEqual(self.snapshot(), before)
