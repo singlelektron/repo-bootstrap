@@ -18,9 +18,10 @@ owner requests otherwise; agent instructions and technical references use Englis
 Choose implementation and development strategy autonomously within the authorized
 task. Routine reversible edits, checks, local commits, documentation maintenance,
 and in-scope review fixes need no extra approval. Ask only for missing decisions or
-authorization affecting material product/scope commitments, destructive actions,
-security/privacy/data guarantees, important permissions, significant costs, or
-external publication/deployment. Existing authorization counts.
+authorization affecting material product/scope or governance commitments,
+authorization boundaries, destructive actions, security/privacy/data guarantees,
+important permissions, significant costs, or external publication/deployment.
+Existing authorization counts.
 
 Keep `{{DEFAULT_BRANCH}}` stable; use task branches or worktrees. Preserve unrelated
 edits, data, and history, including staged/untracked work; never discard, stash,

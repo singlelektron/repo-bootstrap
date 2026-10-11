@@ -99,6 +99,13 @@ documentation defaults. Only synthetic local projects, commits, and checks were
 authorized. The updated regular-PR and reusable merge-authorization rules were
 incorporated during testing; no remote PR, merge, or cleanup was exercised.
 
+The [retained evidence](evidence/governance-2026-10-11.json) includes selected exact
+verification commands/results, validator output, before/after preservation hashes,
+scenario revisions, primary-agent checks, and source-log checksums. Bulky setup
+commands, synthetic application patches, and duplicate output are omitted. The
+pantry's retained skill-snapshot hashes match governance commit `833a2da`; these
+runs do not establish verification of later policy revisions.
+
 ### B: Autonomous persistence baseline
 
 Project: `/tmp/repo-bootstrap-pantry-forward-20261011/project`; branch
@@ -142,12 +149,20 @@ All 27 deterministic tests and official `skill-creator/scripts/quick_validate.py
 passed locally. An initial preservation-test failure came from its own `git status`
 refreshing the index after the baseline snapshot. Moving the snapshot after setup
 retained every preservation assertion; the targeted test passed 20 consecutive
-runs. The validator implementation is unchanged. Local logs are retained in
-`/tmp/repo-bootstrap-governance-evidence/`; hosted CI and review of the Skill change
-are reported in its PR rather than inferred from these local results.
+runs. Those diagnostic outputs were observed in the agent session but were not
+saved to the local evidence directory. The retained artifact contains the full
+27-test output and one later captured targeted regression, which passed; it does
+not represent a rerun of the earlier 20 checks. The validator implementation is
+unchanged. Hosted CI and review of the Skill change are reported in its PR rather
+than inferred from these local results.
 
 ## Evidence limits
 
 Structural success establishes required files, a populated-content heuristic, recognized placeholder checks, and CI-file presence. Passing explicit commands does not prove all behavior correct. Hosted CI, branch protection, merges, deployment, and Codex automatic discovery require separate verification; the historical scenario tests did not establish them.
 
-Temporary projects and complete logs may be removed by system cleanup and are not distributed in this repository. This record preserves requests, results, commands, and limitations; deterministic tests recreate their own repositories each run. Full repeated-adoption idempotence across all languages and platforms was not tested.
+Temporary projects and complete logs may be removed by system cleanup. The selected
+governance evidence above remains in the repository, but it is not a self-contained
+archive of the synthetic projects; hashes identify observations and do not replace
+the omitted source files. This record preserves scenario requests and limitations;
+deterministic tests recreate their own repositories each run. Full repeated-adoption
+idempotence across all languages and platforms was not tested.

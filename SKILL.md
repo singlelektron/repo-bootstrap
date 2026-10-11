@@ -25,9 +25,10 @@ reversible development proceeds autonomously, including relevant checks, local
 branches/commits, documentation maintenance, and in-scope review fixes.
 
 Human involvement normally covers task initiation and final acceptance. Seek
-missing authorization only for material product or scope changes, destructive or
-hard-to-reverse actions, changes to security/privacy/data guarantees or important
-permissions, and significant external costs, publication, or deployment. Existing
+missing authorization only for material product, scope, or governance changes,
+changes to authorization boundaries, destructive or hard-to-reverse actions,
+changes to security/privacy/data guarantees or important permissions, and
+significant external costs, publication, or deployment. Existing
 authorization counts; ordinary technical choices do not need approval. Prepare a
 concrete proposal before asking for a decision and continue independent safe work.
 

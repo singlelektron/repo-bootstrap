@@ -97,9 +97,9 @@ The owner defines the task and acceptance expectations; the agent develops auton
 
 负责人定义任务与验收预期，代理自主开发。实现与相关本地验证完成且发布获授权后，直接创建可审查的普通 PR。仅在工作未完成或明确需要提前反馈时使用草稿，已完成工作无需经过草稿转正式的步骤。让 CI 和可用的 Codex Code Review 运行，处理实质问题并提供简明验收证据。AI 评论不等于 GitHub 正式批准，也不证明正确性。合并前须通过相关 CI，不可用的检查需明确披露。负责人可在初始任务或 PR 审查后授权合并；授权涵盖合并及已合并任务分支的常规清理，并须遵守仓库保护规则，无需重复确认。合并方式依变更结构和仓库约定选择。
 
-Routine reversible development needs no repeated approval. Ask only for missing material product decisions, destructive operations, changed security/privacy/data guarantees or important permissions, significant external costs/publication/deployment, or substantial scope expansion not already authorized. Permission to create a PR covers its necessary branch publication, not merge or deployment.
+Routine reversible development needs no repeated approval. Ask only for missing material product or governance decisions, changed authorization boundaries, destructive operations, changed security/privacy/data guarantees or important permissions, significant external costs/publication/deployment, or substantial scope expansion not already authorized. Permission to create a PR covers its necessary branch publication, not merge or deployment.
 
-常规可逆开发无需重复审批。仅对尚未授权的重要产品决策、破坏性操作、安全或隐私及数据保证或重要权限变更、重大外部费用或发布部署，以及明显超出任务范围的工作，请求必要决定。创建 PR 的授权包含所需分支推送，不包含合并或部署。
+常规可逆开发无需重复审批。仅对尚未授权的重要产品或治理决策、授权边界变更、破坏性操作、安全或隐私及数据保证或重要权限变更、重大外部费用或发布部署，以及明显超出任务范围的工作，请求必要决定。创建 PR 的授权包含所需分支推送，不包含合并或部署。
 
 ## Validator / 校验器
 
