@@ -22,7 +22,7 @@ Run from {{RUN_CONTEXT}}:
 
 - [Daily use, verification, and troubleshooting](docs/OWNER_GUIDE.md)
 - [Approved requirements and open decisions](docs/PRODUCT.md)
-- [Development workflow and checks](AGENTS.md)
+- [Project constraints and development commands](AGENTS.md)
 
 ## Current limitations
 

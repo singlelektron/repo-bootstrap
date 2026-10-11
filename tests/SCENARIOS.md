@@ -2,7 +2,7 @@
 
 Date: 2026-10-11 (Asia/Shanghai). These tests exercised agents following the Skill and inspected their actual artifacts, rather than merely reviewing templates. Independent agents implemented isolated projects under `/tmp`; the primary agent separately checked public behavior and existing-repository preservation. No test published to a remote.
 
-This is a historical record. The original scenario requests explicitly specified Chinese human-facing project documentation. The Skill now defaults to English; those requested language overrides and their observed results remain accurately recorded below. Changing authoring language does not rerun or extend the historical evidence.
+The original scenario requests explicitly specified Chinese human-facing project documentation. Those historical language overrides and results remain recorded below. The governance revision reruns are recorded separately and use the current English default; they do not extend the original evidence.
 
 ## Reproduction procedure
 
@@ -91,6 +91,60 @@ python3 scripts/validate-bootstrap.py \
 ```
 
 The second command exited 1; the only structural failure was the missing PR template. Existing rules prohibited unapproved governance additions, so no template was added and AGENTS was not rewritten. The report distinguished completed authorized adoption work from incomplete full bootstrap. This was the correct safety outcome. The local runner's role was inspected manually; `--ci-path` checked file presence without claiming a configured hosted CI provider.
+
+## Governance revision reruns (2026-10-11)
+
+Independent agents reran scenarios B and C with the revised governance and English
+documentation defaults. Only synthetic local projects, commits, and checks were
+authorized. The updated regular-PR and reusable merge-authorization rules were
+incorporated during testing; no remote PR, merge, or cleanup was exercised.
+
+### B: Autonomous persistence baseline
+
+Project: `/tmp/repo-bootstrap-pantry-forward-20261011/project`; branch
+`codex/pantry-notes-baseline`; final commit `02523e1029f345efffc33b5cbd55172603fac706`.
+All ten tests passed on Python 3.14.8, including Chinese entries across processes,
+eight corrupt-data forms rejected without byte changes, and backup/restore.
+The helper returned `passed_with_local_checks`. English docs and generated AGENTS
+were usable without a further approval pause; the latter includes regular PRs for
+completed work and recognition of initial or later merge/cleanup authorization.
+The task tree was clean, `main` retained initialization, and no remote was added.
+
+The primary agent separately checked fresh Chinese entries, invalid UTF-8 rejected
+by both commands with unchanged bytes, and byte-identical backup restoration.
+Evidence: project-adjacent `HANDOFF.md` and `evidence/` contain exact commands,
+acceptance results, final validator JSON, patch, file hashes, and skill snapshots;
+`/tmp/repo-bootstrap-governance-evidence/root-persistence-check.json` records the
+primary checks. Hosted CI, the configured Python 3.11 runtime, remote protections,
+and hosted review were not verified in this disposable scenario.
+
+### C: Preservation with explicit approval withheld
+
+Worktree: `/tmp/repo-bootstrap-forward-c-o20a637_/adoption`; branch
+`codex/adopt-greeter`; commit `c5120c9b4ccaf54e938a48e6a925ef89b4526f06`.
+Only PRODUCT, OWNER_GUIDE, and `scripts/check.py` were added. Three existing tests
+and five CLI cases passed; two disposable broken-behavior variants failed checks.
+All seven original file hashes, raw index, index entries, HEAD, branch, status,
+staged/unstaged diffs, and remotes were preserved, as were committed files and
+historical ancestry. The primary agent independently confirmed the owner state.
+
+The helper exited 1 solely for the missing PR template. The agent respected the
+explicit ban on governance additions, preserved README/AGENTS, and reported full
+bootstrap as incomplete. This is the expected authorization boundary, not a
+successful structural validation. The local runner was exercised; `--ci-path`
+established its presence only, not hosted CI. Evidence: adjacent `HANDOFF.md` and
+`evidence/{baseline,preservation,commands,final-validator,mutation-checks}.json`;
+primary comparison: `/tmp/repo-bootstrap-governance-evidence/root-adoption-check.json`.
+
+### Skill package verification
+
+All 27 deterministic tests and official `skill-creator/scripts/quick_validate.py`
+passed locally. An initial preservation-test failure came from its own `git status`
+refreshing the index after the baseline snapshot. Moving the snapshot after setup
+retained every preservation assertion; the targeted test passed 20 consecutive
+runs. The validator implementation is unchanged. Local logs are retained in
+`/tmp/repo-bootstrap-governance-evidence/`; hosted CI and review of the Skill change
+are reported in its PR rather than inferred from these local results.
 
 ## Evidence limits
 
