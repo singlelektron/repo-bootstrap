@@ -2,25 +2,25 @@
 
 English / 简体中文
 
-A reusable Agent Skill for an AI-first solo developer: initialize a runnable project or adopt an existing repository with meaningful tests, CI, concise documentation, and review steps an owner can follow without inspecting every line of code.
+A reusable Agent Skill for AI-first projects: initialize a runnable project or adopt an existing repository with minimal governance for scope, Git, verification, and owner acceptance.
 
-面向主要由 AI 编程代理开发的个人项目：初始化可运行的软件，或接入已有仓库，建立实际测试、CI、简洁文档，以及无需逐行阅读源码的验收流程。
+面向主要由 AI 编程代理开发的项目：初始化可运行的软件，或接入已有仓库，为任务范围、Git、验证和负责人验收建立最小治理规则。
 
-This is a language-agnostic workflow, not a fixed-stack scaffolding generator. The agent must implement real project behavior; templates and validation helpers support that work. **English is the default output language.** Use another language for human-facing project documents only when the owner explicitly requests it. Agent instructions, technical references, and template source materials remain in English; this repository's README is bilingual.
+Agents choose their implementation approach within the authorized scope, preserving existing tools and conventions. Templates and validation helpers support real project behavior and an understandable handoff. **English is the default output language.** Human-facing project documents use another language when explicitly requested; agent instructions, technical references, and template sources remain English. This README is bilingual.
 
-这是与技术栈无关的工作流程，不是固定语言的脚手架。代理仍需实现真实功能，模板与校验器只辅助工作。**默认输出语言为英文。** 只有负责人明确要求时，才将生成项目的人类文档改为其他语言。代理指令、技术参考资料和模板源文件保持英文；本仓库 README 使用中英双语。
+代理在授权范围内自主选择实现方式，保留已有工具和约定；模板与校验器辅助实现真实功能，并形成易于理解的交付。**默认输出语言为英文。** 负责人明确要求时，人类文档可使用其他语言；代理指令、技术参考资料和模板源文件保持英文。本 README 使用中英双语。
 
 ## Contents / 文件结构
 
 | Path | Responsibility / 职责 |
 | --- | --- |
-| `SKILL.md` | Entry point, workflow, completion criteria, authorization boundaries / 入口、工作流程、完成条件和授权边界 |
+| `SKILL.md` | Entry point, scope, completion evidence, authorization boundaries / 入口、范围、交付证据和授权边界 |
 | `agents/openai.yaml` | Codex UI metadata and invocation prompt / Codex 显示信息和调用提示 |
 | `references/documentation-policy.md` | Documentation authority, maintenance, and approval / 文档权威位置、维护与审批 |
-| `references/git-workflow.md` | Single-mainline Git workflow and remote controls / 单主线 Git 流程与远端控制 |
-| `references/verification-policy.md` | Risk-based verification and two review levels / 按风险验证和两层审查 |
+| `references/git-workflow.md` | Git boundaries, PR review, and remote controls / Git 边界、PR 审查和远端控制 |
+| `references/verification-policy.md` | Proportionate evidence and owner verification / 按风险提供证据与负责人验收 |
 | `assets/templates/README.md` | Project introduction and run instructions / 项目介绍与运行说明模板 |
-| `assets/templates/AGENTS.md` | Independent instructions for future agents / 后续代理的独立工作指令模板 |
+| `assets/templates/AGENTS.md` | Durable constraints, context, commands, and authority / 持久约束、上下文、命令和授权模板 |
 | `assets/templates/PRODUCT.md` | Approved requirements, assumptions, and acceptance criteria / 已批准需求、假设与验收标准模板 |
 | `assets/templates/OWNER_GUIDE.md` | Usage, verification, updates, troubleshooting, recovery / 使用、验收、更新、排查与恢复模板 |
 | `assets/templates/pull_request_template.md` | Human Review and Technical Verification / 人类验收与技术验证表单 |
@@ -81,21 +81,25 @@ $repo-bootstrap 在 /path/to/new-project 创建本地待办 CLI。
 Existing project / 已有项目：
 
 ```text
-$repo-bootstrap Adopt /path/to/existing-project into a minimal AI development workflow.
+$repo-bootstrap Adopt /path/to/existing-project into minimal AI-first project governance.
 Preserve current behavior, tools, and uncommitted work; inspect AGENTS, tests, and CI first.
 Fill documentation gaps and propose major governance changes for approval.
 Make local changes only.
 ```
 
 ```text
-$repo-bootstrap 为 /path/to/existing-project 接入最小 AI 开发流程。
+$repo-bootstrap 为 /path/to/existing-project 建立最小 AI 项目治理规则。
 保留行为、工具和未提交工作，先检查 AGENTS、测试与 CI。
 补足缺失文档，重大治理修改提出具体方案供审批；仅做本地更改。
 ```
 
-Explicitly authorize remote creation, publication, protection changes, deployment, or merge when needed. Routine reversible implementation and checks already within the task do not need repeated confirmation.
+The owner defines the task and acceptance expectations; the agent develops autonomously. When implementation and relevant local checks are complete and publication is authorized, create a regular PR ready for review. Drafts are for incomplete work or an explicit need for early feedback; completed work needs no draft-to-ready transition. Allow CI and available Codex Code Review to run, address substantive findings, and provide concise acceptance evidence. AI comments are not formal GitHub approval or proof of correctness. Relevant CI must pass before merge; disclose unavailable checks. The owner may authorize merge in the initial task or after PR review. That authorization covers merge and routine cleanup of merged task branches, subject to repository protections; do not request it again. Choose the merge method to fit the changes and repository conventions.
 
-需要新建远端、推送、修改保护规则、部署或合并时，请明确授权对应动作。任务范围内已经授权的可逆实现和验证不需要重复确认。
+负责人定义任务与验收预期，代理自主开发。实现与相关本地验证完成且发布获授权后，直接创建可审查的普通 PR。仅在工作未完成或明确需要提前反馈时使用草稿，已完成工作无需经过草稿转正式的步骤。让 CI 和可用的 Codex Code Review 运行，处理实质问题并提供简明验收证据。AI 评论不等于 GitHub 正式批准，也不证明正确性。合并前须通过相关 CI，不可用的检查需明确披露。负责人可在初始任务或 PR 审查后授权合并；授权涵盖合并及已合并任务分支的常规清理，并须遵守仓库保护规则，无需重复确认。合并方式依变更结构和仓库约定选择。
+
+Routine reversible development needs no repeated approval. Ask only for missing material product or governance decisions, changed authorization boundaries, destructive operations, changed security/privacy/data guarantees or important permissions, significant external costs/publication/deployment, or substantial scope expansion not already authorized. Permission to create a PR covers its necessary branch publication, not merge or deployment.
+
+常规可逆开发无需重复审批。仅对尚未授权的重要产品或治理决策、授权边界变更、破坏性操作、安全或隐私及数据保证或重要权限变更、重大外部费用或发布部署，以及明显超出任务范围的工作，请求必要决定。创建 PR 的授权包含所需分支推送，不包含合并或部署。
 
 ## Validator / 校验器
 
@@ -133,7 +137,7 @@ Validate metadata with the available official `skill-creator/scripts/quick_valid
 
 - Structure and passing commands do not prove correctness, approved requirements, valid CI semantics, or active remote protections. / 结构与命令通过不证明软件正确、需求获批、CI 语义正确或远端保护生效。
 - Verify hosted CI, permissions, plan support, and deployment separately. A local baseline can be complete without a remote, with external setup clearly disclosed. / 托管 CI、权限、计划支持和部署需单独核实；本地基线可以完成，同时明确列出外部设置缺口。
-- There is no automatic merge, migration, or global-install operation. / 不提供自动合并、迁移或全局安装操作。
+- There is no built-in merge, migration, or global-install command. / 不提供内置的合并、迁移或全局安装命令。
 - Existing nonstandard document and PR-template paths may need manual checks; do not reorganize a project solely for this validator. / 非标准文档和 PR 模板路径可能需要人工检查，不为校验器强制重组项目。
 - Repeated adoption inspects before filling gaps; full idempotence across all projects is not claimed. / 重复接入先检查再补缺，不声称对所有项目完全幂等。
 - Command parsing uses POSIX-style `shlex`; Windows and complex command environments need separate verification. / 命令参数使用 POSIX 风格解析；Windows 和复杂命令环境需另行验证。

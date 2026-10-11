@@ -1,23 +1,68 @@
-# Git and GitHub workflow
+# Git and PR governance
 
-Read when initializing Git, adopting an existing repository, creating a PR, or recommending remote controls.
+Read when establishing Git boundaries, delivering a PR, or assessing remote controls.
 
-## Local lifecycle
+## Isolation and preservation
 
-Use the existing default branch, or `main` for a new repository. Keep one stable mainline and short-lived task branches; do not add permanent integration/release branches without a concrete need. One logical task normally produces one branch and one PR. Prefer meaningful commits and squash merge. Delete merged task branches automatically only where configured.
+Keep the stable default branch free of ordinary direct development. Use task
+branches or worktrees suited to the change and existing conventions. A new empty
+repository may receive an initial bootstrap commit; later development is isolated.
+Keep commits and PRs traceable and reasonably scoped, without a fixed count,
+sequence, naming scheme, or permanent branching model.
 
-Inspect branch, status, remotes, recent history and applicable instructions before mutation. Record the initial state when adoption or a dirty tree makes preservation important. Never discard, reset, stash, amend, stage or commit unrelated user work. Use explicit paths for staging. If task work overlaps a user's edit and cannot be safely separated, preserve it and obtain the missing direction; do not clean the tree to make a check pass.
+Preserve unrelated owner edits, staged/untracked files, data, and history. Never
+reset, discard, stash, amend, stage, or commit unrelated work. Inspect staged
+content and use explicit task paths. If overlapping edits cannot be safely
+separated, isolate the work or obtain the missing direction.
 
-The development path is: understand the task → inspect → plan in proportion to scope → create a task branch → implement → commit → validate → self-review → draft PR → human review → merge only when authorized. Earlier checks during implementation are useful; the final commit must have relevant verification. If self-review changes code, commit and rerun affected checks. Disclose failed/skipped checks rather than presenting the PR as ready.
+Local reversible Git work is covered by an authorized task. Remote creation,
+pushes, visibility/collaborator/secret/protection changes, publication, and
+deployment need authorization covering those actions. Permission to open a PR
+includes necessary branch publication, not deployment or merge. Without remote
+authorization or access, deliver a local branch, diff, and PR-style report.
 
-A new, empty repository may receive one controlled bootstrap commit before protection exists. After initialization, implementation belongs on a task branch. Existing repositories retain their branches/history and conventions unless a change is authorized. If a local-only repository has no remote, prepare a reviewable local branch, diff and PR-style report; do not fabricate a PR URL or publish merely to complete a checklist.
+## PR, CI, and review
 
-Routine reversible branch creation, focused edits, relevant tests and local commits are part of an authorized development task. Avoid repeated confirmation. Destructive operations, sensitive access changes and major product decisions require approval at their actual boundary. A request to implement does not authorize creating a remote repository, changing visibility, inviting collaborators, configuring remote secrets, publishing packages, deploying, pushing, or merging. Perform those actions only when the user's request/session explicitly covers them. Permission to open a PR includes its necessary branch publication; it does not include merge or deployment.
+The normal handoff is an owner-defined task, autonomous development, a reviewable
+PR, CI and available review, in-scope fixes, and owner acceptance. This describes
+decision boundaries, not a mandatory implementation sequence. When implementation
+and relevant local verification are complete, create a regular PR ready for review.
+Use a draft only for incomplete work or an explicit need for early feedback; do
+not require a draft-to-ready transition for completed work. Allow CI and available
+automated review to run, address substantive findings, and provide concise evidence
+for owner acceptance. Disclose outstanding verification and approval gaps.
 
-## Remote controls and honest status
+Relevant CI checks must pass before merging. Report actual runs for the delivered
+revision, distinguishing configured checks from observed results. When hosted CI
+is unavailable, disclose the gap for an explicit owner decision; local checks do
+not establish hosted success. Never add dummy checks or bypass repository rules.
 
-For GitHub, recommend PRs for ordinary changes, relevant CI checks, no default-branch force pushes and no default-branch deletion. Retain a practical recovery path for the maintainer. A solo owner must be able to review and merge their own PR: do not require independent approvals when no eligible reviewer exists. High-risk technical review remains a risk decision even when branch settings cannot enforce it.
+Use Codex Code Review when available and configured for the repository; do not
+assume account-level availability guarantees a review on every PR. Report review
+availability and results honestly. It is supplemental, not another required review
+framework or proof of correctness. AI comments are distinct from formal GitHub
+approving reviews and from owner authorization to merge. Do not require an
+independent approving reviewer where none is eligible; respect existing protections.
 
-Discover the actual repository, available permissions and supported plan features before promising configuration. Some settings may be editable by the authenticated tools; others require owner/admin action or plan support. Remote mutation still needs authorization. Read back any changed settings and required check names. Record each control as verified, recommended/manual, unavailable, or unverified. Never equate a configuration file or successful API request with an active verified rule.
+Evaluate findings: address confirmed correctness, security, and data-integrity
+issues within scope. Decline stylistic suggestions or unnecessary refactoring
+with a reason. Escalate findings that require new product or authorization
+decisions. Substantive changes after review need affected verification and renewed
+review when the change invalidates prior conclusions. Avoid open-ended automated
+review/fix loops; surface unresolved substantive issues in the handoff.
 
-CI checks must correspond to real runnable project checks. A newly added workflow is configuration until a real run is observed; report hosted CI as not run/unverified until then. Do not add dummy success checks to satisfy protection requirements.
+Merge requires authorization covering that action. The owner may grant it in the
+initial task or after reviewing the PR; do not ask again for authorization already
+granted. Once authorized, the agent may merge and perform routine cleanup of
+merged task branches, subject to repository protections. Use merge commit, squash,
+or rebase according to project conventions and the structure of the changes.
+Respect permissions, required checks, and branch protection.
+
+## Remote controls
+
+Recommend PRs, relevant required checks, and protection against default-branch
+force pushes/deletion, with a practical maintainer recovery path. Verify repository
+permissions and supported features before claiming settings can be configured.
+Change controls only when authorized and read them back. Distinguish verified,
+recommended/manual, unavailable, and unverified controls; a local configuration
+file or successful API request alone does not prove enforcement.

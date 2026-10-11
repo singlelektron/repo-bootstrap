@@ -1,0 +1,1081 @@
+{
+  "record_type": "selected_governance_forward_test_evidence",
+  "date": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "scope": "Synthetic disposable local projects only; no real owner data, remote publication, deployment, or merge in the scenario tests.",
+  "retention": {
+    "method": "Selected exact command records and parsed JSON outputs copied from original logs. SHA-256 identifies complete source logs. Setup commands, implementation patches, duplicate command output, and synthetic owner diff text are omitted; preservation hashes retain the comparison evidence.",
+    "source_logs": [
+      {
+        "path": "/tmp/repo-bootstrap-governance-evidence/unit-tests.log",
+        "sha256": "e2f114f60bfee286feb8ec86f37c59abdc35594b6938d00edd0bac1f2fb6d86f"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-governance-evidence/root-adoption-check.json",
+        "sha256": "dacc36b758cd6cac542f6d27322a99ddf55555d0aed67b8b821246477c81c6d0"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-governance-evidence/root-persistence-check.json",
+        "sha256": "2efa44a7bb189c7234ac44c31085190b5803baa0506761b3e668e0326aae28ef"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-forward-c-o20a637_/evidence/commands.json",
+        "sha256": "5562a880a01f5a32a1c098e143f14541637a749e1702e6b129c01c41af4fb8d5"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-forward-c-o20a637_/evidence/baseline.json",
+        "sha256": "4e1224564535b7d735828b0ea45337b92090c624e497cb0af3151505e47ec2e1"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-forward-c-o20a637_/evidence/final-owner-state.json",
+        "sha256": "23d351f5fc9628dd5353e3f35db206281a8bdc2accae9a7db4601698534ba213"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-forward-c-o20a637_/evidence/preservation.json",
+        "sha256": "653e11375ac43c61f8e8eaa1bc676143c57affe8e960e8749af79f48d2b1caff"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-forward-c-o20a637_/evidence/final-validator.json",
+        "sha256": "fe183fc9f424e0cb51fd47dce6940332b3c6881160091ace5d2aeb582c0cb762"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-forward-c-o20a637_/evidence/mutation-checks.json",
+        "sha256": "937dd3ad90ae5df09198bd4ad379a36c4ae91488ba959e5f065273f8edb48ee6"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-pantry-forward-20261011/evidence/commands.jsonl",
+        "sha256": "9e417f696a5058cc333d87094c7d18ca7cf8b73815f1a94eec178ea48617df8c"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-pantry-forward-20261011/evidence/acceptance.json",
+        "sha256": "af81ffe0e9bce8b1199f1b7e927eed1565cec15969f8987ef8b516e1f9ef4037"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-pantry-forward-20261011/evidence/validation.json",
+        "sha256": "5437cfd4ccf1562a974edd507591a21ead5024f196d83954f974234788f19ca8"
+      },
+      {
+        "path": "/tmp/repo-bootstrap-pantry-forward-20261011/evidence/manifest.json",
+        "sha256": "13efdf260835de39738145f279929627a64fbe707c65546888d3f4b6452dea0b"
+      }
+    ],
+    "command_selection_zero_based": {
+      "adoption_commands_json": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        17,
+        20,
+        21,
+        23,
+        33,
+        34,
+        48,
+        49,
+        22
+      ],
+      "pantry_commands_jsonl": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        23,
+        26,
+        27,
+        28,
+        31,
+        33
+      ]
+    }
+  },
+  "skill_source": {
+    "governance_commit": "833a2da9328eaae6901d67d35b0605c18c332a51",
+    "preservation_test_fix_commit": "6681f941479aec1817b4ebebf1f71546d8b934d8",
+    "pantry_skill_snapshot_files": {
+      "SKILL.md": {
+        "sha256": "5122732e09fdfba98df891f045697808ea2e32c4a4983da5f1d6caa54271cba6",
+        "matches_revision_833a2da": true
+      },
+      "assets/templates/AGENTS.md": {
+        "sha256": "ef67344946db42a79d371bcf085f0492e26e44cdf47980c660005d53c00c4153",
+        "matches_revision_833a2da": true
+      },
+      "references/documentation-policy.md": {
+        "sha256": "79b527f4600d930eb474c8442c693ee0beeae69921e2a0cd37cd4fb9afef550e",
+        "matches_revision_833a2da": true
+      },
+      "references/git-workflow.md": {
+        "sha256": "9bbd14d5640390520015ce7b8c2e3e3d4f645a17545708b406e96e545657be59",
+        "matches_revision_833a2da": true
+      },
+      "references/verification-policy.md": {
+        "sha256": "2ab7bc9538bc5179a6e3a4a6ccd76761f46c7de34d12fca1f03568978df7d7d3",
+        "matches_revision_833a2da": true
+      }
+    },
+    "qualification": "Forward tests ran while governance text was being revised. Pantry retained these source snapshots; adoption did not retain a complete skill snapshot. These runs do not claim to cover later policy changes."
+  },
+  "skill_package_tests": {
+    "full_suite": {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/home/singlelektron/GIT_repository/repo-bootstrap",
+      "output": "test_instruction_links_resolve_inside_package (test_skill_package.PackageTests.test_instruction_links_resolve_inside_package) ... ok\ntest_metadata_discovery_contract (test_skill_package.PackageTests.test_metadata_discovery_contract) ... ok\ntest_chinese_content_is_populated (test_validate_bootstrap.BootstrapValidatorTests.test_chinese_content_is_populated) ... ok\ntest_ci_can_delegate_to_another_configuration (test_validate_bootstrap.BootstrapValidatorTests.test_ci_can_delegate_to_another_configuration) ... ok\ntest_comment_only_gitignore_fails (test_validate_bootstrap.BootstrapValidatorTests.test_comment_only_gitignore_fails) ... ok\ntest_custom_ci_paths_replace_github_discovery (test_validate_bootstrap.BootstrapValidatorTests.test_custom_ci_paths_replace_github_discovery) ... ok\ntest_directory_without_git_fails (test_validate_bootstrap.BootstrapValidatorTests.test_directory_without_git_fails) ... ok\ntest_document_symlink_within_repository_is_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_document_symlink_within_repository_is_allowed) ... ok\ntest_documented_template_language_examples_are_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_documented_template_language_examples_are_allowed) ... ok\ntest_existing_git_worktree_and_subdirectory_are_supported (test_validate_bootstrap.BootstrapValidatorTests.test_existing_git_worktree_and_subdirectory_are_supported) ... ok\ntest_explicit_commands_run_in_repository_and_shell_metacharacters_are_literal (test_validate_bootstrap.BootstrapValidatorTests.test_explicit_commands_run_in_repository_and_shell_metacharacters_are_literal) ... ok\ntest_external_document_symlink_and_parent_path_fail (test_validate_bootstrap.BootstrapValidatorTests.test_external_document_symlink_and_parent_path_fail) ... ok\ntest_external_workflow_directory_symlink_fails (test_validate_bootstrap.BootstrapValidatorTests.test_external_workflow_directory_symlink_fails) ... ok\ntest_failed_command_is_reported_and_later_command_still_runs (test_validate_bootstrap.BootstrapValidatorTests.test_failed_command_is_reported_and_later_command_still_runs) ... ok\ntest_heading_and_comment_only_documents_fail (test_validate_bootstrap.BootstrapValidatorTests.test_heading_and_comment_only_documents_fail) ... ok\ntest_invalid_utf8_is_a_structural_failure (test_validate_bootstrap.BootstrapValidatorTests.test_invalid_utf8_is_a_structural_failure) ... ok\ntest_missing_check_executable_is_reported (test_validate_bootstrap.BootstrapValidatorTests.test_missing_check_executable_is_reported) ... ok\ntest_missing_directory_and_invalid_command_are_clear_failures (test_validate_bootstrap.BootstrapValidatorTests.test_missing_directory_and_invalid_command_are_clear_failures) ... ok\ntest_missing_documents_and_ci_fail (test_validate_bootstrap.BootstrapValidatorTests.test_missing_documents_and_ci_fail) ... ok\ntest_output_is_bounded_and_non_utf8_output_does_not_crash (test_validate_bootstrap.BootstrapValidatorTests.test_output_is_bounded_and_non_utf8_output_does_not_crash) ... ok\ntest_real_python_symbols_todo_prose_and_shell_variables_are_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_real_python_symbols_todo_prose_and_shell_variables_are_allowed) ... ok\ntest_require_checks_without_commands_fails (test_validate_bootstrap.BootstrapValidatorTests.test_require_checks_without_commands_fails) ... ok\ntest_structural_validation_preserves_existing_bytes_and_git_state (test_validate_bootstrap.BootstrapValidatorTests.test_structural_validation_preserves_existing_bytes_and_git_state) ... ok\ntest_template_tokens_fail_but_github_expressions_are_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_template_tokens_fail_but_github_expressions_are_allowed) ... ok\ntest_timeout_covers_children_that_keep_output_pipe_open (test_validate_bootstrap.BootstrapValidatorTests.test_timeout_covers_children_that_keep_output_pipe_open) ... ok\ntest_timeout_reports_failure (test_validate_bootstrap.BootstrapValidatorTests.test_timeout_reports_failure) ... ok\ntest_unborn_repository_without_checks_is_structure_only (test_validate_bootstrap.BootstrapValidatorTests.test_unborn_repository_without_checks_is_structure_only) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 2.294s\n\nOK\n",
+      "result": "27 tests passed",
+      "returncode": null,
+      "limitation": "The retained original output log does not include the process exit code or an independently captured source revision."
+    },
+    "captured_targeted_regression": {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "test_validate_bootstrap.BootstrapValidatorTests.test_structural_validation_preserves_existing_bytes_and_git_state",
+        "-v"
+      ],
+      "cwd": "/home/singlelektron/GIT_repository/repo-bootstrap",
+      "environment_overrides": {
+        "PYTHONPATH": "tests"
+      },
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_structural_validation_preserves_existing_bytes_and_git_state (test_validate_bootstrap.BootstrapValidatorTests.test_structural_validation_preserves_existing_bytes_and_git_state) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.079s\n\nOK\n",
+      "head": "833a2da9328eaae6901d67d35b0605c18c332a51",
+      "file_sha256": {
+        "tests/test_validate_bootstrap.py": "7b84858fd586d24ad8084268c2acf2bc3cfab40dac3f9b2c938f00b9eda90dfa",
+        "scripts/validate-bootstrap.py": "63205fc79e83370f73ecc310444d8a47ec4afcef37ba4c5dfd7e30940dae1495"
+      },
+      "runs_captured_here": 1
+    },
+    "historical_diagnostic": "The index-refresh diagnostic and 20 consecutive targeted passes were observed in the agent session but their raw output was not saved to the source evidence directories. This artifact captures one later targeted run, not a recreation of those 20 runs."
+  },
+  "scenario_b_persistence": {
+    "project": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+    "manifest": {
+      "revision": "02523e1029f345efffc33b5cbd55172603fac706",
+      "files": {
+        ".github/pull_request_template.md": "314c4c46eea05e9659112f8d9d36d922fc5fcc80976377318f4a8543b64ac7d6",
+        ".github/workflows/ci.yml": "4d54afad6620640a52f9b80ca86c0f89d21a1de1ce58aa9cee30b78c4a6b5592",
+        ".gitignore": "96a758d922fd25ff1596cebc5e86620d8e6dc7aae5324a6c55b6096725b923e1",
+        "AGENTS.md": "426256e63b65598ad04c235f15af885e19f5cf49ef0ae1ad6b92a2f1bd605411",
+        "README.md": "f4df0578f61421b56b78517b33c5f0dbc8d4104eb68155ca201b98b713eaf560",
+        "docs/OWNER_GUIDE.md": "2faf1a2b76653d812249cd5cca10a6f10e46f744262f10aed697e5b7cf935858",
+        "docs/PRODUCT.md": "bd92c0033be3d9d8d5978893ca49e5dbd10d8799ecacb75ba0ac7dd56de2db3e",
+        "pantry_notes.py": "eabcc953d9c5610f07a07b2a49815a63cdc5a42b265a8c43b4053264b2420bde",
+        "tests/test_pantry_notes.py": "c4a8fe5427a136f7391dd8300982dcdd713890d0ff56e88c15c46519b45b1d08"
+      }
+    },
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "--version"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:43.919369+00:00",
+        "returncode": 0,
+        "stdout": "Python 3.14.8\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--help"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.005151+00:00",
+        "returncode": 0,
+        "stdout": "usage: pantry_notes.py [-h] --file FILE {add,list} ...\n\nA standard-library pantry notebook; run with --help for usage.\n\npositional arguments:\n  {add,list}\n    add        append a nonempty pantry note\n    list       list saved notes in insertion order\n\noptions:\n  -h, --help   show this help message and exit\n  --file FILE  explicit path to the JSON data file\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/pantry.json",
+          "add",
+          "大米：还剩两袋"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.141683+00:00",
+        "returncode": 0,
+        "stdout": "Added note 1.\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/pantry.json",
+          "add",
+          "周五买豆腐"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.235707+00:00",
+        "returncode": 0,
+        "stdout": "Added note 2.\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/pantry.json",
+          "list"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.346356+00:00",
+        "returncode": 0,
+        "stdout": "1. 大米：还剩两袋\n2. 周五买豆腐\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "cp",
+          "--",
+          "data/pantry.json",
+          "data/pantry.backup.json"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.380265+00:00",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/pantry.backup.json",
+          "list"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.491745+00:00",
+        "returncode": 0,
+        "stdout": "1. 大米：还剩两袋\n2. 周五买豆腐\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/pantry.json",
+          "add",
+          "restoration rehearsal"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.601692+00:00",
+        "returncode": 0,
+        "stdout": "Added note 3.\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "cp",
+          "--",
+          "data/pantry.json",
+          "data/pantry.before-restore.json"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.626243+00:00",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/pantry.backup.json",
+          "list"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.706095+00:00",
+        "returncode": 0,
+        "stdout": "1. 大米：还剩两袋\n2. 周五买豆腐\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "cp",
+          "--",
+          "data/pantry.backup.json",
+          "data/pantry.json"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.731719+00:00",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/pantry.json",
+          "list"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.826380+00:00",
+        "returncode": 0,
+        "stdout": "1. 大米：还剩两袋\n2. 周五买豆腐\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/corrupt.json",
+          "list"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:44.932858+00:00",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "error: data/corrupt.json: invalid data; expected a UTF-8 JSON array of nonempty strings\n"
+      },
+      {
+        "argv": [
+          "python3",
+          "pantry_notes.py",
+          "--file",
+          "data/corrupt.json",
+          "add",
+          "不可覆盖"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:19:45.042075+00:00",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "error: data/corrupt.json: invalid data; expected a UTF-8 JSON array of nonempty strings\n"
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--cached",
+          "--check"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:20:02.706320+00:00",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "log",
+          "--oneline",
+          "--decorate",
+          "--all"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:20:13.188615+00:00",
+        "returncode": 0,
+        "stdout": "5aa1023 (HEAD -> codex/pantry-notes-baseline) Add persistent pantry CLI, tests, CI, and owner handoff docs\n719eaef (main) Initialize pantry notes project\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "remote",
+          "-v"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:20:13.188675+00:00",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "status",
+          "--short",
+          "--branch"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:20:13.188693+00:00",
+        "returncode": 0,
+        "stdout": "## codex/pantry-notes-baseline\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--cached",
+          "--check"
+        ],
+        "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "time": "2026-10-11T06:20:56.516922+00:00",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "final_validator": {
+      "argv": [
+        "python3",
+        "/home/singlelektron/GIT_repository/repo-bootstrap/scripts/validate-bootstrap.py",
+        "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "--check",
+        "python3 -m unittest discover -s tests -v",
+        "--require-checks",
+        "--json"
+      ],
+      "cwd": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+      "time": "2026-10-11T06:20:58.525834+00:00",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_json": {
+        "schema_version": 1,
+        "repository": "/tmp/repo-bootstrap-pantry-forward-20261011/project",
+        "status": "passed_with_local_checks",
+        "structural_validation": {
+          "status": "passed",
+          "checks": [
+            {
+              "name": "git-worktree",
+              "status": "passed",
+              "detail": "Working tree found; a first commit is not required.",
+              "path": "/tmp/repo-bootstrap-pantry-forward-20261011/project"
+            },
+            {
+              "name": "gitignore",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": ".gitignore"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "README.md"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "AGENTS.md"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "docs/PRODUCT.md"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "docs/OWNER_GUIDE.md"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": ".github/pull_request_template.md"
+            },
+            {
+              "name": "ci-configuration",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": ".github/workflows/ci.yml"
+            }
+          ]
+        },
+        "executed_checks": [
+          {
+            "argv": [
+              "python3",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "status": "passed",
+            "returncode": 0,
+            "output": "test_backup_restore_rehearsal (test_pantry_notes.PantryNotesTests.test_backup_restore_rehearsal) ... ok\ntest_blank_note_is_rejected_without_a_file (test_pantry_notes.PantryNotesTests.test_blank_note_is_rejected_without_a_file) ... ok\ntest_corrupt_files_error_and_preserve_exact_bytes (test_pantry_notes.PantryNotesTests.test_corrupt_files_error_and_preserve_exact_bytes) ... ok\ntest_directory_and_symlink_are_rejected (test_pantry_notes.PantryNotesTests.test_directory_and_symlink_are_rejected) ... ok\ntest_explicit_files_are_isolated (test_pantry_notes.PantryNotesTests.test_explicit_files_are_isolated) ... ok\ntest_failed_replace_preserves_existing_bytes_and_cleans_temporary_file (test_pantry_notes.PantryNotesTests.test_failed_replace_preserves_existing_bytes_and_cleans_temporary_file) ... ok\ntest_file_argument_is_required (test_pantry_notes.PantryNotesTests.test_file_argument_is_required) ... ok\ntest_list_missing_file_does_not_create_it (test_pantry_notes.PantryNotesTests.test_list_missing_file_does_not_create_it) ... ok\ntest_missing_parent_fails_without_creating_directories (test_pantry_notes.PantryNotesTests.test_missing_parent_fails_without_creating_directories) ... ok\ntest_unicode_survives_separate_processes_in_order (test_pantry_notes.PantryNotesTests.test_unicode_survives_separate_processes_in_order) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 1.414s\n\nOK\n",
+            "output_truncated": false,
+            "elapsed_seconds": 1.569,
+            "command": "python3 -m unittest discover -s tests -v"
+          }
+        ],
+        "hosted_ci": {
+          "status": "unverified",
+          "detail": "Configuration presence does not verify hosted CI execution."
+        },
+        "warnings": [
+          "Structural validation and passing local commands are not proof of application correctness."
+        ],
+        "errors": []
+      }
+    },
+    "acceptance": {
+      "readme_path": "passed; two Chinese entries in separate processes",
+      "restore": "passed; byte-identical backup restored and listed",
+      "corrupt_add_and_list": "both exit 1 with useful errors, exact bytes preserved",
+      "corrupt_sha256_before": "a2daaa22ca69334325ace4db0a7e6a69fd3f091b852534ca36fc91789e02facb",
+      "corrupt_sha256_after": "a2daaa22ca69334325ace4db0a7e6a69fd3f091b852534ca36fc91789e02facb"
+    },
+    "primary_agent_checks": {
+      "temporary_directory": "/tmp/repo-bootstrap-root-pantry-x1x8cts8",
+      "persistence": true,
+      "invalid_utf8_preserved": true,
+      "restoration": true,
+      "commands": [
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/tmp/repo-bootstrap-pantry-forward-20261011/project/pantry_notes.py",
+            "--file",
+            "/tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json",
+            "add",
+            "红豆"
+          ],
+          "exit": 0,
+          "stdout": "Added note 1.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/tmp/repo-bootstrap-pantry-forward-20261011/project/pantry_notes.py",
+            "--file",
+            "/tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json",
+            "add",
+            "绿茶"
+          ],
+          "exit": 0,
+          "stdout": "Added note 2.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/tmp/repo-bootstrap-pantry-forward-20261011/project/pantry_notes.py",
+            "--file",
+            "/tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json",
+            "list"
+          ],
+          "exit": 0,
+          "stdout": "1. 红豆\n2. 绿茶\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/tmp/repo-bootstrap-pantry-forward-20261011/project/pantry_notes.py",
+            "--file",
+            "/tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json",
+            "list"
+          ],
+          "exit": 1,
+          "stdout": "",
+          "stderr": "error: /tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json: invalid data; expected a UTF-8 JSON array of nonempty strings\n"
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/tmp/repo-bootstrap-pantry-forward-20261011/project/pantry_notes.py",
+            "--file",
+            "/tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json",
+            "add",
+            "不可覆盖"
+          ],
+          "exit": 1,
+          "stdout": "",
+          "stderr": "error: /tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json: invalid data; expected a UTF-8 JSON array of nonempty strings\n"
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/tmp/repo-bootstrap-pantry-forward-20261011/project/pantry_notes.py",
+            "--file",
+            "/tmp/repo-bootstrap-root-pantry-x1x8cts8/notes.json",
+            "list"
+          ],
+          "exit": 0,
+          "stdout": "1. 红豆\n2. 绿茶\n",
+          "stderr": ""
+        }
+      ]
+    }
+  },
+  "scenario_c_adoption": {
+    "project": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "--version"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "Python 3.14.8\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "--version"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "git version 2.56.0\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "greet.py"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "Hello, World!\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "greet.py",
+          "Ada"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "Hello, Ada!\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "greet.py",
+          "Ada Lovelace"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "Hello, Ada Lovelace!\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "greet.py",
+          "世界"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "Hello, 世界!\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "greet.py",
+          "--help"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "usage: greet.py [-h] [name]\n\nPrint a friendly greeting.\n\npositional arguments:\n  name\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--cached",
+          "--check"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "c5120c9b4ccaf54e938a48e6a925ef89b4526f06\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "python3",
+          "scripts/check.py"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "Local checks passed.\n",
+        "stderr": "test_default (test_greet.GreetTests.test_default) ... ok\ntest_named (test_greet.GreetTests.test_named) ... ok\ntest_unicode (test_greet.GreetTests.test_unicode) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "16c3cf3077b729489bcf8936fde563d79cbb6828",
+          "HEAD",
+          "--check"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "rev-parse",
+          "trunk"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/owner-repo",
+        "returncode": 0,
+        "stdout": "16c3cf3077b729489bcf8936fde563d79cbb6828\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "merge-base",
+          "--is-ancestor",
+          "16c3cf3077b729489bcf8936fde563d79cbb6828",
+          "HEAD"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--name-status",
+          "16c3cf3077b729489bcf8936fde563d79cbb6828",
+          "HEAD"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "returncode": 0,
+        "stdout": "A\tdocs/OWNER_GUIDE.md\nA\tdocs/PRODUCT.md\nA\tscripts/check.py\n",
+        "stderr": ""
+      }
+    ],
+    "final_validator": {
+      "argv": [
+        "python3",
+        "/home/singlelektron/GIT_repository/repo-bootstrap/scripts/validate-bootstrap.py",
+        "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "--ci-path",
+        "scripts/check.py",
+        "--check",
+        "python3 scripts/check.py",
+        "--require-checks",
+        "--json"
+      ],
+      "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_json": {
+        "schema_version": 1,
+        "repository": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption",
+        "status": "failed",
+        "structural_validation": {
+          "status": "failed",
+          "checks": [
+            {
+              "name": "git-worktree",
+              "status": "passed",
+              "detail": "Working tree found; a first commit is not required.",
+              "path": "/tmp/repo-bootstrap-forward-c-o20a637_/adoption"
+            },
+            {
+              "name": "gitignore",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": ".gitignore"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "README.md"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "AGENTS.md"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "docs/PRODUCT.md"
+            },
+            {
+              "name": "document",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "docs/OWNER_GUIDE.md"
+            },
+            {
+              "name": "document",
+              "status": "failed",
+              "detail": "Required regular file is missing.",
+              "path": ".github/pull_request_template.md"
+            },
+            {
+              "name": "ci-configuration",
+              "status": "passed",
+              "detail": "Present, populated, and no recognized template tokens.",
+              "path": "scripts/check.py"
+            }
+          ]
+        },
+        "executed_checks": [
+          {
+            "argv": [
+              "python3",
+              "scripts/check.py"
+            ],
+            "status": "passed",
+            "returncode": 0,
+            "output": "test_default (test_greet.GreetTests.test_default) ... ok\ntest_named (test_greet.GreetTests.test_named) ... ok\ntest_unicode (test_greet.GreetTests.test_unicode) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\nLocal checks passed.\n",
+            "output_truncated": false,
+            "elapsed_seconds": 0.315,
+            "command": "python3 scripts/check.py"
+          }
+        ],
+        "hosted_ci": {
+          "status": "unverified",
+          "detail": "Configuration presence does not verify hosted CI execution."
+        },
+        "warnings": [
+          "Structural validation and passing local commands are not proof of application correctness."
+        ],
+        "errors": []
+      }
+    },
+    "before_owner_state": {
+      "file_sha256": {
+        ".gitignore": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b",
+        "AGENTS.md": "58c50e38edfb7f83b4085902230ee0e0627f185828867363c5a7c67d7e229844",
+        "README.md": "ac5dd335146dfda4b890d2d17472769a27b8639fa4f8ef2cc03ef93108163c47",
+        "greet.py": "9c9342fc145c4d03cfaf9387b5d26eb5edbc2e038ee1944285c920edbdb634ff",
+        "notes.txt": "1dec981c56a65b7ba639418d34fe904d41ae43206115065e5ed791300154f692",
+        "private-data.txt": "5f5e19158ef1f292fe20b2acf1484790c768bc8b2bee7e6baec926c7d5152237",
+        "tests/test_greet.py": "d17bc1ee993993dde1381c627f026aba51cc9d787bc2336d49ffa689df860b7e"
+      },
+      "index_sha256": "02089741028783bcc05c9b3569a48701939ffb9ab223d58e5145d619c0345a6d",
+      "head": "16c3cf3077b729489bcf8936fde563d79cbb6828",
+      "branch": "trunk",
+      "branches": "refs/heads/trunk 16c3cf3077b729489bcf8936fde563d79cbb6828\n",
+      "status": " M greet.py\nMM notes.txt\n?? private-data.txt\n",
+      "remotes": "",
+      "git_output_sha256": {
+        "index": "c43873a768a55d52088e204d8586c7944ee3a48383c2df7ec2abe179b9b667ff",
+        "staged_diff": "f3d1a6a0785b367945f26e99e5957d1267312dd459e6a6b632f3b168768b9093",
+        "unstaged_diff": "31849cc19d45d0ba5b0e0b8c3991903b0dc3b0a983e8272f5c5eeee5f9861eae"
+      }
+    },
+    "after_owner_state": {
+      "file_sha256": {
+        ".gitignore": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b",
+        "AGENTS.md": "58c50e38edfb7f83b4085902230ee0e0627f185828867363c5a7c67d7e229844",
+        "README.md": "ac5dd335146dfda4b890d2d17472769a27b8639fa4f8ef2cc03ef93108163c47",
+        "greet.py": "9c9342fc145c4d03cfaf9387b5d26eb5edbc2e038ee1944285c920edbdb634ff",
+        "notes.txt": "1dec981c56a65b7ba639418d34fe904d41ae43206115065e5ed791300154f692",
+        "private-data.txt": "5f5e19158ef1f292fe20b2acf1484790c768bc8b2bee7e6baec926c7d5152237",
+        "tests/test_greet.py": "d17bc1ee993993dde1381c627f026aba51cc9d787bc2336d49ffa689df860b7e"
+      },
+      "index_sha256": "02089741028783bcc05c9b3569a48701939ffb9ab223d58e5145d619c0345a6d",
+      "head": "16c3cf3077b729489bcf8936fde563d79cbb6828",
+      "branch": "trunk",
+      "branches": "refs/heads/codex/adopt-greeter c5120c9b4ccaf54e938a48e6a925ef89b4526f06\nrefs/heads/trunk 16c3cf3077b729489bcf8936fde563d79cbb6828\n",
+      "status": " M greet.py\nMM notes.txt\n?? private-data.txt\n",
+      "remotes": "",
+      "git_output_sha256": {
+        "index": "c43873a768a55d52088e204d8586c7944ee3a48383c2df7ec2abe179b9b667ff",
+        "staged_diff": "f3d1a6a0785b367945f26e99e5957d1267312dd459e6a6b632f3b168768b9093",
+        "unstaged_diff": "31849cc19d45d0ba5b0e0b8c3991903b0dc3b0a983e8272f5c5eeee5f9861eae"
+      }
+    },
+    "preservation": {
+      "owner_unchanged": {
+        "files": true,
+        "index_sha256": true,
+        "head": true,
+        "branch": true,
+        "index": true,
+        "status": true,
+        "staged_diff": true,
+        "unstaged_diff": true,
+        "remotes": true
+      },
+      "trunk_preserved": true,
+      "original_history_is_ancestor": true,
+      "committed_files_unchanged": {
+        ".gitignore": true,
+        "AGENTS.md": true,
+        "README.md": true,
+        "greet.py": true,
+        "notes.txt": true,
+        "tests/test_greet.py": true
+      },
+      "new_branch": "codex/adopt-greeter",
+      "task_revision": "c5120c9b4ccaf54e938a48e6a925ef89b4526f06",
+      "worktree_clean": true,
+      "task_changed_paths": "A\tdocs/OWNER_GUIDE.md\nA\tdocs/PRODUCT.md\nA\tscripts/check.py\n",
+      "all_required_preservation_checks_passed": true
+    },
+    "primary_agent_checks": {
+      "file:.gitignore": true,
+      "file:AGENTS.md": true,
+      "file:README.md": true,
+      "file:greet.py": true,
+      "file:notes.txt": true,
+      "file:private-data.txt": true,
+      "file:tests/test_greet.py": true,
+      "raw_index": true,
+      "head": true,
+      "branch": true,
+      "index": true,
+      "status": true,
+      "staged_diff": true,
+      "unstaged_diff": true,
+      "remotes": true
+    },
+    "mutation_checks": [
+      {
+        "argv": [
+          "python3",
+          "scripts/check.py"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/mutation-cli-output",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "test_default (test_greet.GreetTests.test_default) ... ok\ntest_named (test_greet.GreetTests.test_named) ... ok\ntest_unicode (test_greet.GreetTests.test_unicode) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\nGreeting check failed for []: CompletedProcess(args=['/usr/bin/python3', 'greet.py'], returncode=0, stdout='Broken CLI\\n', stderr='')\n"
+      },
+      {
+        "argv": [
+          "python3",
+          "scripts/check.py"
+        ],
+        "cwd": "/tmp/repo-bootstrap-forward-c-o20a637_/mutation-function-output",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "test_default (test_greet.GreetTests.test_default) ... FAIL\ntest_named (test_greet.GreetTests.test_named) ... FAIL\ntest_unicode (test_greet.GreetTests.test_unicode) ... FAIL\n\n======================================================================\nFAIL: test_default (test_greet.GreetTests.test_default)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/repo-bootstrap-forward-c-o20a637_/mutation-function-output/tests/test_greet.py\", line 8, in test_default\n    self.assertEqual(greet(), \"Hello, World!\")\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'Broken function' != 'Hello, World!'\n- Broken function\n+ Hello, World!\n\n\n======================================================================\nFAIL: test_named (test_greet.GreetTests.test_named)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/repo-bootstrap-forward-c-o20a637_/mutation-function-output/tests/test_greet.py\", line 11, in test_named\n    self.assertEqual(greet(\"Ada\"), \"Hello, Ada!\")\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'Broken function' != 'Hello, Ada!'\n- Broken function\n+ Hello, Ada!\n\n\n======================================================================\nFAIL: test_unicode (test_greet.GreetTests.test_unicode)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/repo-bootstrap-forward-c-o20a637_/mutation-function-output/tests/test_greet.py\", line 14, in test_unicode\n    self.assertEqual(greet(\"世界\"), \"Hello, 世界!\")\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'Broken function' != 'Hello, 世界!'\n- Broken function\n+ Hello, 世界!\n\n\n----------------------------------------------------------------------\nRan 3 tests in 0.003s\n\nFAILED (failures=3)\n"
+      }
+    ],
+    "expected_incomplete_result": "Validator exit 1 solely reflects the missing PR template: the scenario explicitly withheld approval for governance additions. Authorized local checks passed and existing owner state was preserved."
+  },
+  "limitations": [
+    "Temporary projects, full logs, source snapshots, and omitted synthetic implementation files can be removed by system cleanup. This compact artifact preserves observations, not a self-contained rerunnable project archive.",
+    "Checksums identify retained observations and source files; they do not independently prove that the recorded execution occurred.",
+    "Structural validation, passing tests, and AI review do not prove application correctness.",
+    "These scenario tests did not exercise hosted CI, remote protection, remote review, PR publication, merge, cleanup authorization, or deployment. Skill PR CI and review evidence belongs in the PR.",
+    "The configured pantry Python 3.11 CI runtime was not executed locally; the recorded local runtime is Python 3.14.8.",
+    "Official metadata validation was reported in SCENARIOS.md, but its raw output was not present among these source logs.",
+    "Full repeated-adoption idempotence and compatibility across all languages and platforms were not tested."
+  ],
+  "review_followup": {
+    "basis_commit": "833a2da9328eaae6901d67d35b0605c18c332a51",
+    "scope": "Local package verification after clarifying governance/authorization boundaries and preserving this evidence artifact. Scenario B/C were not rerun; their original revisions and limitations remain above. File digests identify the tested working-tree content, excluding this self-containing evidence file.",
+    "source_sha256": {
+      "README.md": "36fccc2a614d4fda32665fa20eb3ff1afe3514eb9e26b89ab279568b1d6ec6b3",
+      "SKILL.md": "708e85320ed1ce773430beee29e508f9c8fd7e5f4f869ac3993aef7de3d0f297",
+      "assets/templates/AGENTS.md": "517e99146a49f36b854b0d694c91c2a59d8ed9b1338891e16639ed3431e8b2af",
+      "tests/SCENARIOS.md": "4db1e42c0faa25abf7636caaec250b98dce57d4e8a28eacf3316fa4499ef6ca3",
+      "tests/test_validate_bootstrap.py": "7b84858fd586d24ad8084268c2acf2bc3cfab40dac3f9b2c938f00b9eda90dfa",
+      "scripts/validate-bootstrap.py": "63205fc79e83370f73ecc310444d8a47ec4afcef37ba4c5dfd7e30940dae1495"
+    },
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": "/home/singlelektron/GIT_repository/repo-bootstrap",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "test_instruction_links_resolve_inside_package (test_skill_package.PackageTests.test_instruction_links_resolve_inside_package) ... ok\ntest_metadata_discovery_contract (test_skill_package.PackageTests.test_metadata_discovery_contract) ... ok\ntest_chinese_content_is_populated (test_validate_bootstrap.BootstrapValidatorTests.test_chinese_content_is_populated) ... ok\ntest_ci_can_delegate_to_another_configuration (test_validate_bootstrap.BootstrapValidatorTests.test_ci_can_delegate_to_another_configuration) ... ok\ntest_comment_only_gitignore_fails (test_validate_bootstrap.BootstrapValidatorTests.test_comment_only_gitignore_fails) ... ok\ntest_custom_ci_paths_replace_github_discovery (test_validate_bootstrap.BootstrapValidatorTests.test_custom_ci_paths_replace_github_discovery) ... ok\ntest_directory_without_git_fails (test_validate_bootstrap.BootstrapValidatorTests.test_directory_without_git_fails) ... ok\ntest_document_symlink_within_repository_is_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_document_symlink_within_repository_is_allowed) ... ok\ntest_documented_template_language_examples_are_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_documented_template_language_examples_are_allowed) ... ok\ntest_existing_git_worktree_and_subdirectory_are_supported (test_validate_bootstrap.BootstrapValidatorTests.test_existing_git_worktree_and_subdirectory_are_supported) ... ok\ntest_explicit_commands_run_in_repository_and_shell_metacharacters_are_literal (test_validate_bootstrap.BootstrapValidatorTests.test_explicit_commands_run_in_repository_and_shell_metacharacters_are_literal) ... ok\ntest_external_document_symlink_and_parent_path_fail (test_validate_bootstrap.BootstrapValidatorTests.test_external_document_symlink_and_parent_path_fail) ... ok\ntest_external_workflow_directory_symlink_fails (test_validate_bootstrap.BootstrapValidatorTests.test_external_workflow_directory_symlink_fails) ... ok\ntest_failed_command_is_reported_and_later_command_still_runs (test_validate_bootstrap.BootstrapValidatorTests.test_failed_command_is_reported_and_later_command_still_runs) ... ok\ntest_heading_and_comment_only_documents_fail (test_validate_bootstrap.BootstrapValidatorTests.test_heading_and_comment_only_documents_fail) ... ok\ntest_invalid_utf8_is_a_structural_failure (test_validate_bootstrap.BootstrapValidatorTests.test_invalid_utf8_is_a_structural_failure) ... ok\ntest_missing_check_executable_is_reported (test_validate_bootstrap.BootstrapValidatorTests.test_missing_check_executable_is_reported) ... ok\ntest_missing_directory_and_invalid_command_are_clear_failures (test_validate_bootstrap.BootstrapValidatorTests.test_missing_directory_and_invalid_command_are_clear_failures) ... ok\ntest_missing_documents_and_ci_fail (test_validate_bootstrap.BootstrapValidatorTests.test_missing_documents_and_ci_fail) ... ok\ntest_output_is_bounded_and_non_utf8_output_does_not_crash (test_validate_bootstrap.BootstrapValidatorTests.test_output_is_bounded_and_non_utf8_output_does_not_crash) ... ok\ntest_real_python_symbols_todo_prose_and_shell_variables_are_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_real_python_symbols_todo_prose_and_shell_variables_are_allowed) ... ok\ntest_require_checks_without_commands_fails (test_validate_bootstrap.BootstrapValidatorTests.test_require_checks_without_commands_fails) ... ok\ntest_structural_validation_preserves_existing_bytes_and_git_state (test_validate_bootstrap.BootstrapValidatorTests.test_structural_validation_preserves_existing_bytes_and_git_state) ... ok\ntest_template_tokens_fail_but_github_expressions_are_allowed (test_validate_bootstrap.BootstrapValidatorTests.test_template_tokens_fail_but_github_expressions_are_allowed) ... ok\ntest_timeout_covers_children_that_keep_output_pipe_open (test_validate_bootstrap.BootstrapValidatorTests.test_timeout_covers_children_that_keep_output_pipe_open) ... ok\ntest_timeout_reports_failure (test_validate_bootstrap.BootstrapValidatorTests.test_timeout_reports_failure) ... ok\ntest_unborn_repository_without_checks_is_structure_only (test_validate_bootstrap.BootstrapValidatorTests.test_unborn_repository_without_checks_is_structure_only) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 2.284s\n\nOK\n"
+      },
+      {
+        "argv": [
+          "python3",
+          "/home/singlelektron/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+          "/home/singlelektron/GIT_repository/repo-bootstrap"
+        ],
+        "cwd": "/home/singlelektron/GIT_repository/repo-bootstrap",
+        "returncode": 0,
+        "stdout": "Skill is valid!\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "cwd": "/home/singlelektron/GIT_repository/repo-bootstrap",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  }
+}

@@ -1,33 +1,45 @@
-# Verification and owner review
+# Verification and owner acceptance
 
-Read when choosing checks, completing a bootstrap, or preparing a meaningful development PR.
+Read when choosing checks or preparing evidence for a bootstrap or change.
 
-## Choose depth from risk
+## Evidence proportional to consequences
 
-Classify the changed behavior by the most consequential plausible failure, not by patch size. Record the tier and brief reason in the PR/report.
+Choose verification from the changed behavior and plausible failure, not patch
+size or a fixed activity checklist. Inspect documentation/appearance changes;
+exercise public behavior and affected error paths for logic changes. Use the
+project's tools and relevant tests without imposing a framework or mandatory risk
+label. Repeat or broaden checks for changed behavior, failures, or unresolved
+concerns, rather than arbitrary iterations.
 
-| Risk | Typical behavior | Proportionate evidence |
-| --- | --- | --- |
-| Low | Documentation, appearance, minor presentation | Inspect the changed result, check applicable links/rendering and relevant build checks; do not invent tests for wording |
-| Medium | Application logic, file operations, ordinary local data | Relevant automated tests plus observable acceptance steps; cover affected errors and compatibility |
-| High | Money, authentication, sensitive data, destructive migrations, important persistent state | Failure-path and integration evidence, backup/restore or migration rehearsal where relevant, explicit risk decisions, and independent qualified human technical review where appropriate |
-| Critical | High-impact safety/security systems | Stop before critical external use or release until a qualified human defines and reviews the validation/approval plan; ordinary tests or AI review alone are insufficient |
+Persistent data needs observable save/reload, clear overwrite/failure behavior,
+and recovery instructions. Verify claimed backup/restore procedures on disposable
+data. Money, authentication, sensitive data, destructive migrations, and valuable
+persistent state need stronger failure-path and integration evidence, including
+recovery/migration rehearsals where relevant. Never use real owner data for
+destructive tests. During adoption, verify preservation of existing work and history.
 
-Simple persistent storage can be medium risk; a destructive migration or valuable irreplaceable data raises it. Use disposable data for recovery/rehearsal checks. Do not test destruction on a real user project. An additional AI reviewer can find defects, but cannot stand in for a qualified human or prove correctness.
+Seek qualified human technical review where consequences exceed available
+verification. Critical safety/security use or release needs a qualified human's
+validation and approval plan. Passing tests, structural validation, and a clean
+AI review are different forms of evidence; none alone proves product correctness.
+For CI/review handling and merge authority, use [Git governance](git-workflow.md).
 
-## Two review layers
+## Reviewable results
 
-Every meaningful PR/report includes both layers, sized to the change:
+Give the owner enough evidence to accept or reject the outcome without reading
+every line of code. The [PR template](../assets/templates/pull_request_template.md)
+separates two audiences; size the content to the change and omit irrelevant fields:
 
-- **Human review:** What changed and why, observable behavior, reproducible owner steps with inputs and expected results, remaining risks/limits, and any pending product decision. UI changes benefit from actual screenshots; CLI/backend changes from runnable commands and sample outputs; libraries from a minimal public API example. The owner can reject work that fails observable acceptance criteria without inspecting its implementation.
-- **Technical verification:** Relevant modules and implementation choices, tests added/changed, exact commands actually executed and outcomes, CI run status/link where observed, failures/skips, compatibility/migrations, and important unverified assumptions. State which commit or local revision the evidence covers.
+- **Human Review:** what changed and why; reproducible actions, inputs, and expected
+  outcomes; remaining limitations, risks, or product decisions. Use screenshots,
+  runnable commands, or public API examples where they clarify acceptance.
+- **Technical Verification:** actual checks and results for the delivered revision,
+  observed CI and review status, substantive findings and their disposition, and
+  failures, skipped checks, or unverified assumptions. Include compatibility,
+  migration, and recovery evidence when relevant.
 
-Use `assets/templates/pull_request_template.md` as an adaptation aid. Describe actual results, including failures. Never invent screenshots, logs, passing tests, hosted CI runs, branch protection, or reviewer approval. If an owner action is necessary, provide its concrete steps and explain what remains unverified.
-
-## Evidence at bootstrap completion
-
-Run the program/library through its documented installation/build path and demonstrate its meaningful behavior. Use standard checks suitable for the actual toolchain and project; do not force one language or add tools without a reason. Provide basic automated tests and a corresponding CI configuration. A structural validator can confirm files, metadata and Git scaffolding; it cannot establish working software or product correctness.
-
-For a persistent-data project, demonstrate save/reload and relevant failure handling; verify any documented backup/recovery procedure on disposable data before claiming it works. For adoption, verify preservation of initial history, existing instructions and unrelated user edits. For all modes, ensure approved criteria are satisfied or clearly report outstanding decisions/checks.
-
-Report completion separately from external readiness: local checks may pass while hosted CI, remote controls or deployment remain unconfigured. Do not conceal those gaps or invent remote activity to close them. After checks pass, repeat or broaden them only for changed code, failures, new evidence or an unresolved concern.
+Exercise the documented install/run and acceptance path before claiming a working
+baseline. Report owner-only checks as pending. Structural success confirms only
+scaffolding; do not invent tests, logs, screenshots, remote protections, hosted
+runs, or approvals. Separate local completion from external readiness, and make
+any required owner action concrete.

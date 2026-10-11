@@ -1,38 +1,20 @@
-<!-- Adaptation note: this is a reusable PR form, not a report of the bootstrap task. Remove this note; retain useful field hints. Default to English unless the owner explicitly requests another language. When writing an actual PR, fill from evidence and omit inapplicable fields. -->
+<!-- Adapt this reusable form to the project; remove this note. Default to English unless the owner requests otherwise. Fill from evidence and omit irrelevant fields. -->
 ## Human Review
 
-**What changed, and why:**
-
-<!-- Explain the change and the problem it solves. -->
-
-**What is now observable or usable:**
-
-<!-- Describe behavior the owner can see or use. -->
+**What changed and why:**
 
 **How the owner can verify it:**
 
-<!-- Give inputs, steps, and expected results; reference PRODUCT acceptance criteria. Use actual screenshots for UI changes, runnable commands for CLI/backend changes, or a minimal public API example for libraries. -->
+<!-- Give actions, inputs, and expected outcomes. Link to acceptance criteria or existing owner instructions rather than copying them. -->
 
-**Remaining risks or limitations:**
-
-**Owner product decision needed:**
-
-<!-- State that none is needed, or identify the concrete decision awaiting approval. -->
+**Remaining limitations, risks, or owner decisions:**
 
 ## Technical Verification
 
-- Risk level and reason:
-- Revision covered:
-- Important implementation details and affected modules:
-- Tests added or changed:
-- Compatibility, migration, or recovery considerations:
+**Revision and actual checks/results:**
 
-| Commands actually executed | Actual results and evidence |
-| --- | --- |
-|  |  |
+<!-- Include failures, skipped checks, and unverified assumptions. Add compatibility, migration, or recovery evidence when relevant. -->
 
-- CI:
-- Failures, skipped checks, and unverified assumptions:
-- Recovery rehearsals, qualified human technical review, or approvals needed for high-risk changes:
+**CI and review status:**
 
-<!-- Write "not run/unverified" unless an actual CI run was observed; do not claim it passed. AI review is supplemental. Keep high-risk changes in draft while necessary verification or approvals are missing, and identify the gaps. -->
+<!-- Link observed runs/reviews; otherwise state unavailable, pending, or unverified. Summarize substantive findings and fixes or reasons for declining suggestions. Distinguish AI comments from formal approving reviews and owner merge authorization. -->
