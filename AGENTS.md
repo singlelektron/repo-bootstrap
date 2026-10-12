@@ -13,6 +13,9 @@ agent/maintainer documentation and template sources in accurate English. Generat
 human-facing project documentation defaults to English unless the owner explicitly
 requests another language. Preserve non-English test data needed to verify Unicode.
 
+Follow the [third-party code and attribution policy](assets/templates/AGENTS.md#third-party-code-and-attribution)
+when maintaining this Skill as well as when generating projects.
+
 Work on a task branch after the initial bootstrap commit. Commit only task changes.
 Run `python3 -m unittest discover -s tests -v`; run the available official skill
 metadata validator when changing frontmatter. Tests need Python 3.10+ and Git;

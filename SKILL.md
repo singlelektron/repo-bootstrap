@@ -44,6 +44,11 @@ For adoption, retain what works and close the authorized gaps. Choose tools and
 verification proportional to the project rather than prescribing a stack,
 architecture, test framework, or extra services.
 
+Follow the [third-party code and attribution policy](assets/templates/AGENTS.md#third-party-code-and-attribution)
+when researching or incorporating third-party materials, including assets and
+dependencies. This section is the shared policy
+source for bootstrap work and durable project instructions.
+
 Provide relevant CI on PRs and the stable default branch using the existing
 provider, or minimal GitHub Actions when none exists. Use reproducible dependency
 installation, a supported project runtime, least-needed permissions, and no
@@ -66,6 +71,8 @@ for nonstandard paths rather than reorganizing a project to satisfy the validato
 
 Generated `AGENTS.md` must work without this Skill: durable constraints, sources
 of truth, relevant commands, authorization/Git boundaries, and review evidence.
+Include the third-party policy in the project's own instructions, preserving
+equivalent existing rules; do not leave a dependency on this Skill's template path.
 Do not turn it into a coding tutorial or require a sequence of internal steps.
 Keep temporary plans and review history in Issues/PRs or the local handoff.
 Human-facing documents default to English unless the owner requests another
@@ -94,7 +101,8 @@ other providers. Equivalent manual checks suffice when Python is unavailable;
 disclose that the helper was not run.
 
 Deliver a reviewable PR when publication is authorized, or a local diff and
-PR-style report otherwise. Explain what changed, owner verification steps, actual
+PR-style report otherwise. Use the [PR template](assets/templates/pull_request_template.md)
+for either form of handoff. Explain what changed, owner verification steps, actual
 checks/CI/review results, remaining risks or decisions, Git state, and external
 setup gaps. Include data location and recovery implications where relevant.
 Self-review the final diff for scope, safety, and consistency. Evidence must apply

@@ -20,6 +20,33 @@ Request: Create a Node/JavaScript standard-library project in a temporary direct
 
 Inspect public input/output, empty files, read failures, and reproducible owner steps. Avoid unnecessary frameworks, architecture documents, and empty directories.
 
+Third-party reuse variant: supply a separate synthetic candidate implementation
+of the counter, with an origin note but no license or permission grant. Tell the
+agent it may evaluate that candidate or choose another implementation, without
+granting a licensing exception;
+keep all other scenario A requirements, using the default English documents.
+Inspect the implementation choice, the standalone generated agent instructions,
+and the local PR-style disclosure. This exercises an unknown-license decision,
+not real-world license compatibility or required-notice preservation.
+
+Rights-approval variant: start from a completed disposable scenario A project and
+ask an independent agent to refresh its governance using the current Skill. Supply
+an unlicensed candidate implementation and a project owner's explicit approval to
+use it and accept licensing risk, while stating that the owner holds no rights to
+the candidate and supplies no rights-holder permission. Authorize local delivery
+only. Inspect the reuse decision, generated instructions, and actual local
+handoff. Retain the request and current Skill hashes separately from earlier runs.
+
+Materials variant: start from a disposable completed scenario A project and ask
+an independent agent to refresh governance, evaluate separately supplied
+documentation assets, and consider an optional local package dependency. Provide
+a synthetic SVG with explicit permission and notice-retention terms, image/font/
+dataset/binary candidates with no terms, and an archive dependency with
+incompatible terms. Authorize only local changes and handoff. Inspect actual
+incorporation decisions, preserved notices, source records, standalone instructions,
+and disclosure. Binary/font placeholders test policy decisions, not rendering or
+execution. Do not replace earlier evidence with the new observations.
+
 ### B: Persistent-data application
 
 Request: Create a Python standard-library pantry-notes CLI in a temporary directory. Add Chinese entries and list them in later processes; select the data file explicitly. Missing files may initialize; existing corrupt files must produce an error without overwriting their bytes. Target Linux and explicitly use Chinese usage and backup/recovery instructions. Include tests, CI, and local commits. Use disposable data only, without a remote.
@@ -155,6 +182,86 @@ saved to the local evidence directory. The retained artifact contains the full
 not represent a rerun of the earlier 20 checks. The validator implementation is
 unchanged. Hosted CI and review of the Skill change are reported in its PR rather
 than inferred from these local results.
+
+## Third-party attribution rerun (2026-10-12)
+
+An independent agent ran the scenario A variant with default English documents
+and a synthetic candidate whose origin note supplied no license or permission
+grant. The request explicitly granted no licensing exception before project
+artifacts were generated. Only disposable local work was authorized.
+
+Project: `/tmp/repo-bootstrap-attribution-20261012/project`; branch
+`codex/word-count-cli`; commit `19ae806a3213008c8e605fec5024108ac9b97594`.
+The agent excluded the candidate, wrote a distinct streaming implementation, and
+disclosed the unresolved candidate licensing in its local handoff. The generated
+AGENTS retained all nine third-party rules without depending on the installed
+Skill, and its PR template included the disclosure field. No empty notices file
+was created. The supplied source remained byte-identical.
+
+All 12 CLI tests passed on Node 26.11.1; the helper returned
+`passed_with_local_checks`. Three initial sandbox attempts failed because Node
+child-process spawning returned `EPERM`; the same checks passed after approved
+escalation. The primary agent separately checked fresh Unicode, empty, and missing
+files, unchanged input bytes, generated instructions, snapshot hashes, the final
+commit, and clean Git state. No remote was configured.
+
+[Retained evidence](evidence/third-party-attribution-2026-10-12.json) includes the
+exact request and clarification, selected command output, policy snapshot hashes,
+generated instructions and handoff, and primary checks. All 27 Skill tests and
+the official metadata validator passed; independent review found no remaining
+actionable policy issues. The scenario does not verify real license compatibility,
+copying with required-notice preservation, hosted CI, or human acceptance.
+
+## Third-party review-fix rerun (2026-10-12)
+
+An independent agent ran the rights-approval variant against a disposable copy of
+the completed scenario A project. The request approved candidate reuse and risk
+acceptance but supplied neither ownership nor permission. The agent kept the
+candidate out, retained the existing counter, and updated the generated AGENTS
+and PR template. Its local handoff disclosed no incorporated third-party
+additions and the unresolved candidate licensing.
+
+Project: `/tmp/repo-bootstrap-rights-review-20261012/project`; branch
+`codex/adopt-rights-governance`; commit `061eaab0c3c3bca85b26545b0a1a653791ca88c3`.
+All 12 existing tests passed on Node 26.11.1 after approved escalation for sandbox
+subprocess restrictions. The helper passed all eight structural checks as
+`structure_only`; the tests were run separately. Owner sample, empty-file, and
+missing-path checks also passed. The primary agent independently verified current
+Skill snapshot hashes, unchanged code/tests/candidate bytes, the generated policy
+and disclosure, the final commit, clean tree, and absence of remotes.
+
+[Selected evidence](evidence/third-party-review-fixes-2026-10-12.json) retains the
+request, decisions, current policy hashes, final test output, generated policy,
+local handoff, and verification limits. All 27 package tests, official metadata
+validation, and independent policy-diff review passed. Earlier attribution evidence
+remains unchanged and covers `982a95a`, not this policy correction. The new run
+does not validate an actual rights grant, legal exception, or hosted CI.
+
+## Third-party materials rerun (2026-10-12)
+
+An independent agent ran the materials variant against a disposable copy of the
+completed scenario A project. The generated policy applied verification, notice
+records, and exclusion rules to code, images, fonts, datasets, binaries, and
+dependencies. One permitted SVG was incorporated unchanged with adjacent full
+terms, its required copyright comment, a source/notice record, and local disclosure.
+Four candidates with no terms and an archive package whose terms prohibited
+incorporation were excluded; archive contents were inspected without installation
+or execution.
+
+Project: `/tmp/repo-bootstrap-materials-review-20261012/project`; branch
+`codex/materials-governance`; commit `951a8aa65de191e1ff199587471151e6a2f4cf05`.
+The helper passed with `structure_only`; SVG XML and local documentation links
+were checked. The primary agent independently confirmed current policy hashes,
+byte-identical SVG and permission terms, notice/source records, absence of excluded
+materials and dependencies, unchanged code/tests/CI/supplied fixtures, clean Git
+state, and no remotes. All 27 package tests and official metadata validation passed.
+Runtime tests were not repeated for unchanged application code.
+
+[Selected evidence](evidence/third-party-materials-2026-10-12.json) retains the
+request, six candidate decisions, policy hashes, synthetic terms, generated policy,
+notice record, handoff, and primary checks. Earlier evidence remains unchanged.
+This run does not establish real legal compliance, visual rendering, binary/font
+execution, hosted CI, or owner acceptance.
 
 ## Evidence limits
 
