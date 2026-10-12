@@ -29,6 +29,14 @@ Inspect the implementation choice, the standalone generated agent instructions,
 and the local PR-style disclosure. This exercises an unknown-license decision,
 not real-world license compatibility or required-notice preservation.
 
+Rights-approval variant: start from a completed disposable scenario A project and
+ask an independent agent to refresh its governance using the current Skill. Supply
+an unlicensed candidate implementation and a project owner's explicit approval to
+use it and accept licensing risk, while stating that the owner holds no rights to
+the candidate and supplies no rights-holder permission. Authorize local delivery
+only. Inspect the reuse decision, generated instructions, and actual local
+handoff. Retain the request and current Skill hashes separately from earlier runs.
+
 ### B: Persistent-data application
 
 Request: Create a Python standard-library pantry-notes CLI in a temporary directory. Add Chinese entries and list them in later processes; select the data file explicitly. Missing files may initialize; existing corrupt files must produce an error without overwriting their bytes. Target Linux and explicitly use Chinese usage and backup/recovery instructions. Include tests, CI, and local commits. Use disposable data only, without a remote.
@@ -193,6 +201,31 @@ generated instructions and handoff, and primary checks. All 27 Skill tests and
 the official metadata validator passed; independent review found no remaining
 actionable policy issues. The scenario does not verify real license compatibility,
 copying with required-notice preservation, hosted CI, or human acceptance.
+
+## Third-party review-fix rerun (2026-10-12)
+
+An independent agent ran the rights-approval variant against a disposable copy of
+the completed scenario A project. The request approved candidate reuse and risk
+acceptance but supplied neither ownership nor permission. The agent kept the
+candidate out, retained the existing counter, and updated the generated AGENTS
+and PR template. Its local handoff disclosed no incorporated third-party
+additions and the unresolved candidate licensing.
+
+Project: `/tmp/repo-bootstrap-rights-review-20261012/project`; branch
+`codex/adopt-rights-governance`; commit `061eaab0c3c3bca85b26545b0a1a653791ca88c3`.
+All 12 existing tests passed on Node 26.11.1 after approved escalation for sandbox
+subprocess restrictions. The helper passed all eight structural checks as
+`structure_only`; the tests were run separately. Owner sample, empty-file, and
+missing-path checks also passed. The primary agent independently verified current
+Skill snapshot hashes, unchanged code/tests/candidate bytes, the generated policy
+and disclosure, the final commit, clean tree, and absence of remotes.
+
+[Selected evidence](evidence/third-party-review-fixes-2026-10-12.json) retains the
+request, decisions, current policy hashes, final test output, generated policy,
+local handoff, and verification limits. All 27 package tests, official metadata
+validation, and independent policy-diff review passed. Earlier attribution evidence
+remains unchanged and covers `982a95a`, not this policy correction. The new run
+does not validate an actual rights grant, legal exception, or hosted CI.
 
 ## Evidence limits
 

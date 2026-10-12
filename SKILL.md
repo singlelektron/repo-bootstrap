@@ -100,7 +100,8 @@ other providers. Equivalent manual checks suffice when Python is unavailable;
 disclose that the helper was not run.
 
 Deliver a reviewable PR when publication is authorized, or a local diff and
-PR-style report otherwise. Explain what changed, owner verification steps, actual
+PR-style report otherwise. Use the [PR template](assets/templates/pull_request_template.md)
+for either form of handoff. Explain what changed, owner verification steps, actual
 checks/CI/review results, remaining risks or decisions, Git state, and external
 setup gaps. Include data location and recovery implications where relevant.
 Self-review the final diff for scope, safety, and consistency. Evidence must apply

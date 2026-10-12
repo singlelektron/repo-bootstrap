@@ -1,4 +1,4 @@
-<!-- Adapt this reusable form to the project; remove this note. Default to English unless the owner requests otherwise. Fill from evidence and omit irrelevant fields. -->
+<!-- Use this form for PRs or local handoffs. Adapt it to the project and remove this note. Default to English unless the owner requests otherwise. Fill from evidence and omit irrelevant fields. -->
 ## Human Review
 
 **What changed and why:**
@@ -11,7 +11,7 @@
 
 **New third-party code, assets, dependencies, and licensing concerns:**
 
-<!-- State none when applicable; otherwise identify additions, sources, licenses, and notice records. Disclose unresolved concerns and checks not performed; do not imply unverified compliance. -->
+<!-- State none when applicable; otherwise identify additions, sources, licenses or other documented legal bases, and notice records. Disclose unresolved concerns and checks not performed; do not imply unverified compliance. -->
 
 ## Technical Verification
 
