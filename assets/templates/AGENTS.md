@@ -38,10 +38,10 @@ merge and clean up merged task branches, respecting permissions and protections.
 
 - Agents may freely research existing open-source projects, algorithms, architectures, and implementation techniques.
 - Prefer existing libraries over copying implementations when practical.
-- Before copying or adapting substantial third-party code, verify its license and compatibility with this project, or document another valid legal basis covering the intended use.
+- Before incorporating any third-party material into the project, including code, images, fonts, datasets, binaries, and dependencies, verify and document its license and compatibility with the intended use, or another valid legal basis covering that use.
 - Preserve all legally required copyright, license, and attribution notices.
-- Record incorporated third-party code, relevant licenses or other legal bases, and sources in an appropriate location, such as `THIRD_PARTY_NOTICES.md`; preserve existing notice conventions.
-- If licensing is unknown or incompatible, keep the code out until a compatible license, permission from the relevant rights holder, or a documented applicable legal exception establishes a valid basis for the intended use. Obtain explicit human approval before relying on such permission or exception; project-owner approval alone does not supply third-party rights.
+- Record all incorporated third-party materials, relevant licenses or other legal bases, and sources in an appropriate location, such as `THIRD_PARTY_NOTICES.md`; preserve existing notice conventions.
+- If a third-party material's licensing is unknown or incompatible, keep it out until a compatible license, permission from the relevant rights holder, or a documented applicable legal exception establishes a valid basis for the intended use. Obtain explicit human approval before relying on such permission or exception; project-owner approval alone does not supply third-party rights.
 - Original implementations inspired by general ideas do not require formal attribution, but significant technical influences may be acknowledged voluntarily.
 - Before submitting a PR or delivering a local handoff, report any new third-party code, assets, dependencies, or unresolved licensing concerns.
 - Never claim licensing compliance has been verified when it has not.

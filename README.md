@@ -35,9 +35,9 @@ Adapt templates rather than overwriting existing files. Replace `{{UPPER_SNAKE_C
 
 模板应按项目调整，不直接覆盖已有文件。替换 `{{UPPER_SNAKE_CASE}}`，删除无关章节和适配注释；翻译生成文档时同步修正标题锚点。按需读取参考资料，不把整个 Skill 复制成每个项目的代理指令。
 
-The [third-party code and attribution policy](assets/templates/AGENTS.md#third-party-code-and-attribution) applies during bootstrap and remains in generated project instructions. PRs and local handoffs disclose new third-party code, assets, dependencies, and unresolved licensing concerns; use existing notice records or create them when needed.
+The [third-party code and attribution policy](assets/templates/AGENTS.md#third-party-code-and-attribution) applies to all incorporated third-party materials, including assets and dependencies, and remains in generated project instructions. PRs and local handoffs disclose additions and unresolved licensing concerns; use existing notice records or create them when needed.
 
-[第三方代码与署名规则](assets/templates/AGENTS.md#third-party-code-and-attribution) 适用于初始化过程，并保留在生成的项目指令中。PR 和本地交付均需披露新增的第三方代码、资源、依赖和未解决的许可问题；沿用已有署名记录，或按需创建。
+[第三方代码与署名规则](assets/templates/AGENTS.md#third-party-code-and-attribution) 适用于引入的所有第三方材料，包括资源与依赖，并保留在生成的项目指令中。PR 和本地交付均需披露新增材料和未解决的许可问题；沿用已有署名记录，或按需创建。
 
 ## Installation and invocation / 安装与调用
 

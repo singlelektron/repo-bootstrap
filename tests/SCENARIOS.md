@@ -37,6 +37,16 @@ the candidate and supplies no rights-holder permission. Authorize local delivery
 only. Inspect the reuse decision, generated instructions, and actual local
 handoff. Retain the request and current Skill hashes separately from earlier runs.
 
+Materials variant: start from a disposable completed scenario A project and ask
+an independent agent to refresh governance, evaluate separately supplied
+documentation assets, and consider an optional local package dependency. Provide
+a synthetic SVG with explicit permission and notice-retention terms, image/font/
+dataset/binary candidates with no terms, and an archive dependency with
+incompatible terms. Authorize only local changes and handoff. Inspect actual
+incorporation decisions, preserved notices, source records, standalone instructions,
+and disclosure. Binary/font placeholders test policy decisions, not rendering or
+execution. Do not replace earlier evidence with the new observations.
+
 ### B: Persistent-data application
 
 Request: Create a Python standard-library pantry-notes CLI in a temporary directory. Add Chinese entries and list them in later processes; select the data file explicitly. Missing files may initialize; existing corrupt files must produce an error without overwriting their bytes. Target Linux and explicitly use Chinese usage and backup/recovery instructions. Include tests, CI, and local commits. Use disposable data only, without a remote.
@@ -226,6 +236,32 @@ local handoff, and verification limits. All 27 package tests, official metadata
 validation, and independent policy-diff review passed. Earlier attribution evidence
 remains unchanged and covers `982a95a`, not this policy correction. The new run
 does not validate an actual rights grant, legal exception, or hosted CI.
+
+## Third-party materials rerun (2026-10-12)
+
+An independent agent ran the materials variant against a disposable copy of the
+completed scenario A project. The generated policy applied verification, notice
+records, and exclusion rules to code, images, fonts, datasets, binaries, and
+dependencies. One permitted SVG was incorporated unchanged with adjacent full
+terms, its required copyright comment, a source/notice record, and local disclosure.
+Four candidates with no terms and an archive package whose terms prohibited
+incorporation were excluded; archive contents were inspected without installation
+or execution.
+
+Project: `/tmp/repo-bootstrap-materials-review-20261012/project`; branch
+`codex/materials-governance`; commit `951a8aa65de191e1ff199587471151e6a2f4cf05`.
+The helper passed with `structure_only`; SVG XML and local documentation links
+were checked. The primary agent independently confirmed current policy hashes,
+byte-identical SVG and permission terms, notice/source records, absence of excluded
+materials and dependencies, unchanged code/tests/CI/supplied fixtures, clean Git
+state, and no remotes. All 27 package tests and official metadata validation passed.
+Runtime tests were not repeated for unchanged application code.
+
+[Selected evidence](evidence/third-party-materials-2026-10-12.json) retains the
+request, six candidate decisions, policy hashes, synthetic terms, generated policy,
+notice record, handoff, and primary checks. Earlier evidence remains unchanged.
+This run does not establish real legal compliance, visual rendering, binary/font
+execution, hosted CI, or owner acceptance.
 
 ## Evidence limits
 

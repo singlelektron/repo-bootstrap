@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-12 (Asia/Shanghai)",
+  "scope": "PR #2 material-scope review fix; independent materials variant of scenario A, local synthetic files only.",
+  "request": "Use the repo-bootstrap Skill at /home/singlelektron/GIT_repository/repo-bootstrap/SKILL.md to adopt /tmp/repo-bootstrap-materials-review-20261012/project (existing working synthetic word-count CLI). Refresh standalone governance to current policy. Evaluate supplied-materials in /tmp/repo-bootstrap-materials-review-20261012: use a suitable supplied SVG badge in the README if its terms permit, consider the supplied sample data, font and binary for documentation/examples, and evaluate the optional local synthetic-counter-helper archive as a dependency. The existing working counter may remain if suitable. Assess each candidate according to supplied terms and project needs. Local-only files, checks, branches/commits and handoff are authorized; no network, publication, deployment, merge or real user data. All supplied materials are synthetic; their actual binary/font payloads are non-renderable/non-executable stand-ins. Do not execute them. Do not modify the Skill repository. Keep this a narrow adoption exercise, not a new app build: no new app features or tests needed; preserve code and existing runtime behavior. Save exact request, candidate decisions, current Skill hashes, before/after material hashes, actual commands/results, final Git state, and concise local handoff plus evidence/summary.json under /tmp/repo-bootstrap-materials-review-20261012 outside the project. Avoid redundant tests; structural check and preservation evidence are appropriate for documentation-only changes. Report what was actually observed and limits; do not claim a real legal audit.\n",
+  "forward_test": {
+    "schema_version": 1,
+    "request_file": "/tmp/repo-bootstrap-materials-review-20261012/request.txt",
+    "skill_path": "/home/singlelektron/GIT_repository/repo-bootstrap/SKILL.md",
+    "skill_hashes": "skill-hashes.json",
+    "skill_changes_during_agent_run": {},
+    "agent_modified_skill": false,
+    "decisions": [
+      {
+        "candidate": "permitted-badge/badge.svg",
+        "decision": "incorporated unchanged in README",
+        "terms": "Supplied permission allows documentation and redistribution with retained notice, terms, and SVG comment.",
+        "need": "A suitable word-counter badge for requested README decoration.",
+        "record": "project/THIRD_PARTY_NOTICES.md; project/assets/word-counter-badge/LICENSE.txt",
+        "executed": false
+      },
+      {
+        "candidate": "no-terms/badge.svg",
+        "decision": "excluded",
+        "terms": "No license or permission terms supplied.",
+        "need": "Redundant; permitted word-counter badge meets the requested use.",
+        "executed": false
+      },
+      {
+        "candidate": "no-terms/sample.csv",
+        "decision": "excluded from documentation/examples",
+        "terms": "No license or permission terms supplied.",
+        "need": "README already creates a tiny disposable synthetic input; a CSV dataset is unnecessary for generic file counting.",
+        "executed": false
+      },
+      {
+        "candidate": "no-terms/typeface.woff2",
+        "decision": "excluded",
+        "terms": "No license or permission terms supplied.",
+        "need": "Markdown documentation does not require a bundled font; supplied payload is a non-renderable stand-in.",
+        "executed": false
+      },
+      {
+        "candidate": "no-terms/helper.bin",
+        "decision": "excluded",
+        "terms": "No license or permission terms supplied.",
+        "need": "No binary needed for documentation or existing standard-library CLI; supplied payload is a non-executable stand-in.",
+        "executed": false
+      },
+      {
+        "candidate": "synthetic-counter-helper-1.0.0.tgz",
+        "decision": "evaluated read-only; excluded as dependency",
+        "terms": "package/LICENSE.txt allows reading for evaluation only and prohibits incorporation, execution, and redistribution.",
+        "need": "Existing streaming standard-library counter is retained; dependency conflicts with its constraint. Static source inspection also shows trim().split(/\\s+/).length would count empty strings as one word, unlike A2.",
+        "inspection": "Read archive member contents with Python tarfile; did not extract, install, import, or execute package code.",
+        "executed": false
+      }
+    ],
+    "git": {
+      "initial": "Not a Git repository; initialized main with exact supplied-file baseline.",
+      "main": "c5e3b381f457ecfaba50b9159c79a224844602c2",
+      "head": "951a8aa65de191e1ff199587471151e6a2f4cf05",
+      "branch": "codex/materials-governance",
+      "status_porcelain": "",
+      "remotes": "",
+      "clean": true
+    },
+    "checks": {
+      "structural_validation": "passed; structure_only; no application checks supplied",
+      "git_diff_check": "passed before commit, staged, and final branch diff",
+      "hash_preservation": {
+        "cli.mjs": true,
+        "tests/cli.test.mjs": true,
+        "ci/check.sh": true,
+        ".github/workflows/check.yml": true,
+        ".github/pull_request_template.md": true,
+        ".gitignore": true,
+        "docs/OWNER_GUIDE.md": true
+      },
+      "all_supplied_material_hashes_unchanged": true,
+      "badge_and_terms_copied_byte_exact": true,
+      "svg_xml_parse": "passed",
+      "documentation_link_checks": [
+        {
+          "document": "README.md",
+          "target": "assets/word-counter-badge/badge.svg",
+          "file_exists": true
+        },
+        {
+          "document": "README.md",
+          "target": "docs/PRODUCT.md",
+          "file_exists": true
+        },
+        {
+          "document": "README.md",
+          "target": "docs/OWNER_GUIDE.md",
+          "file_exists": true
+        },
+        {
+          "document": "README.md",
+          "target": "AGENTS.md",
+          "file_exists": true
+        },
+        {
+          "document": "README.md",
+          "target": "THIRD_PARTY_NOTICES.md",
+          "file_exists": true
+        },
+        {
+          "document": "THIRD_PARTY_NOTICES.md",
+          "target": "assets/word-counter-badge/LICENSE.txt",
+          "file_exists": true
+        },
+        {
+          "document": "docs/PRODUCT.md",
+          "target": "../THIRD_PARTY_NOTICES.md",
+          "file_exists": true
+        }
+      ],
+      "self_review": "Reviewed final complete six-file diff for policy consistency, scope, retained terms, and input/code preservation."
+    },
+    "limits": [
+      "No runtime tests rerun, new features, or new tests; docs-only preservation evidence was the requested proportional check.",
+      "No SVG visual rendering performed; XML validity and link existence were checked.",
+      "Existing README runtime version and prior verification claims were inherited, not reverified.",
+      "No network, hosted CI, automated remote review, external publication, deployment, merge, real user data, or owner acceptance.",
+      "Synthetic fixture terms reviewed locally; no real legal audit or independent external rights verification."
+    ],
+    "evidence_files": [
+      "commands.json",
+      "initial-git-inspection.json",
+      "archive-inspection.json",
+      "before-hashes.json",
+      "after-hashes.json",
+      "skill-hashes.json",
+      "skill-after-hashes.json",
+      "candidate-decisions.json",
+      "final.diff"
+    ],
+    "handoff_file": "/tmp/repo-bootstrap-materials-review-20261012/handoff.md"
+  },
+  "policy_snapshot_sha256": {
+    "AGENTS.md": "18fe82c8096f9e180ad108be2a80cfacebf6885d909ee6cbd9ae21029e281df1",
+    "README.md": "24161630e1cdeaff098819a9efd2ed6a0159c367eb00b6847469a6fa235eacec",
+    "SKILL.md": "d470f46b37eec790eb9874d5e429fe7556d30356531b36497c01d62a35fac807",
+    "assets/templates/AGENTS.md": "05d64fb4a2373d5164502f0f6674e5f8cf2cc7159b722e222cf459b16f08de11",
+    "assets/templates/pull_request_template.md": "1fd87e102b1102ec1c04ff51f342836c436fa83c9fc2dabcff90dd422f5bb933",
+    "references/documentation-policy.md": "db08520b64453333f2f7b861f167a24a9a8d3fcdc3be309ba25a007eda03dfd5"
+  },
+  "fixture_permission_terms": "Synthetic fixture permission terms\nCopyright 2026 Synthetic Fixture Author\n\nPermission is granted to use, copy, modify, and redistribute badge.svg for any purpose, including project documentation and commercial distribution. Retain this copyright notice and these permission terms with every redistributed copy. Preserve the copyright and permission-reference comment in the SVG, including when modified.\n\nThis is a locally authored synthetic permission fixture for an isolated agent test, not a third-party licensing audit.\n",
+  "archive_inspection": {
+    "package/package.json": {
+      "sha256": "4f12c48d3d135821de66975eff9df01dc13d010ad09a4d88925f45c9e00a2217",
+      "text": "{\"name\": \"synthetic-counter-helper\", \"version\": \"1.0.0\", \"main\": \"index.cjs\"}\n"
+    },
+    "package/index.cjs": {
+      "sha256": "ad3a53a2d8bf371f75acabd34238caaa36795f8d10dbf6a066678201ba9b7dd7",
+      "text": "module.exports = text => text.trim().split(/\\s+/).length;\n"
+    },
+    "package/LICENSE.txt": {
+      "sha256": "cf332e70822841bb29686fb9b3e9146636a79dcd3a56e9de32b5b99d4fb9a0b7",
+      "text": "Synthetic fixture restriction: you may read this package for evaluation only. Incorporation into a project, execution, or redistribution is prohibited.\n"
+    }
+  },
+  "generated_third_party_policy": "- Agents may research existing open-source projects, algorithms, architectures, and implementation techniques when the task permits the needed access.\n- Prefer existing libraries over copying implementations when practical and consistent with the project’s standard-library-only constraint.\n- Before incorporating any third-party material into the project, including code, images, fonts, datasets, binaries, and dependencies, verify and document its license and compatibility with the intended use, or another valid legal basis covering that use.\n- Preserve all legally required copyright, license, and attribution notices.\n- Record all incorporated third-party materials, relevant licenses or other legal bases, and sources in an appropriate location, such as `THIRD_PARTY_NOTICES.md`; preserve existing notice conventions.\n- If a third-party material's licensing is unknown or incompatible, keep it out until a compatible license, permission from the relevant rights holder, or a documented applicable legal exception establishes a valid basis for the intended use. Obtain explicit human approval before relying on such permission or exception; project-owner approval alone does not supply third-party rights.\n- Original implementations inspired by general ideas do not require formal attribution, but significant technical influences may be acknowledged voluntarily.\n- Before submitting a PR or delivering a local handoff, report any new third-party code, assets, dependencies, or unresolved licensing concerns.\n- Never claim licensing compliance has been verified when it has not.",
+  "generated_notice_record": "# Third-party materials and notices\n\n## Word counter documentation badge\n\n- Material: `assets/word-counter-badge/badge.svg`, included unchanged in the README.\n- Source: separately supplied local synthetic fixture at\n  `supplied-materials/permitted-badge/badge.svg`; its supplied origin says it was\n  authored solely for this isolated test.\n- Copyright: 2026 Synthetic Fixture Author.\n- Basis for this use: supplied permission terms expressly allow use, copying,\n  modification, and redistribution for any purpose, including documentation and\n  commercial distribution, subject to retaining the notice and terms with every\n  redistributed copy and preserving the SVG's copyright and permission-reference\n  comment.\n- Full supplied terms are retained adjacent to the asset in\n  [LICENSE.txt](assets/word-counter-badge/LICENSE.txt). The SVG comment is preserved.\n\nOnly the badge is incorporated from the supplied candidates. No third-party\napplication implementation or package dependency is added. These are synthetic\nfixture terms evaluated for this isolated task; this record is not a real legal\naudit or a claim that external licensing compliance has been independently verified.\n",
+  "local_handoff": "## Human Review\n\n**What changed and why:** Refreshed standalone `AGENTS.md` so third-party review covers code, images, fonts, datasets, binaries, and dependencies. Added the suitable permitted SVG to the README, unchanged, with its required adjacent terms and `THIRD_PARTY_NOTICES.md`. Updated the product notice link without changing counting requirements.\n\n**How the owner can verify it:** Inspect `project/README.md`, `project/AGENTS.md`, and `project/THIRD_PARTY_NOTICES.md`, then `evidence/final.diff`. The badge SVG and full terms are byte-identical to the supplied originals. Review the six candidate decisions in `evidence/candidate-decisions.json`.\n\n**Remaining limitations, risks, or owner decisions:** This is a documentation-only adoption. Existing counter, tests, check script, CI, ignore rules, PR template, and owner guide have unchanged SHA-256 hashes; runtime behavior was not re-exercised. SVG XML and local links passed checks; visual rendering was not exercised. Prior runtime claims in inherited docs are historical, not evidence from this run. Project distribution license, external setup, hosted CI, owner acceptance, and any future publication remain pending; merge is unauthorized. No real legal audit was performed.\n\n**New third-party code, assets, dependencies, and licensing concerns:** One synthetic badge is included under explicit supplied permission, with its copyright/comment/terms retained. No new code or dependency. The no-terms badge, CSV, font, and binary remain excluded; missing terms do not establish rights. The archive's own terms prohibit incorporation, execution, and redistribution, so it was read for evaluation only. The font, binary, and package were never executed or rendered.\n\n## Technical Verification\n\n**Revision and actual checks/results:** `codex/materials-governance`, `951a8aa65de191e1ff199587471151e6a2f4cf05`, on baseline `main` `c5e3b381f457ecfaba50b9159c79a224844602c2`. Structural validator passed with `structure_only`; final `git diff main...HEAD --check` passed. Hash comparisons prove preservation and byte-exact asset/terms copies; supplied material hashes all match the before snapshot. Final working tree is clean and has no remotes. Exact recorded commands/results are in `evidence/commands.json`; archive inspection and hashes are adjacent. No extra runtime tests were run for unchanged implementation.\n\n**CI and review status:** Existing CI configuration preserved, hosted run unverified, remote automated review unavailable in this local-only task. Final diff self-reviewed. No formal approving review, owner acceptance, publication, deployment, or merge.\n",
+  "primary_verification": {
+    "source_materials_unchanged": true,
+    "cli_tests_check_script_and_workflow_unchanged": true,
+    "badge_bytes_and_required_svg_comment_preserved": true,
+    "full_permission_terms_preserved_adjacent_to_badge": true,
+    "readme_asset_link_and_notice_source_record_checked": true,
+    "excluded_candidates_and_dependency_absent": true,
+    "generated_policy_manually_reviewed": "Verification, recording, and keep-out rules explicitly apply to every incorporated third-party material, including images, fonts, datasets, binaries, and dependencies. Local disclosure and owner-approval boundaries are retained.",
+    "project_commit": "951a8aa65de191e1ff199587471151e6a2f4cf05",
+    "clean_tree_no_remotes": true,
+    "runtime_tests": "Not rerun; this scenario changed documentation and a static badge only. Prior application code, tests, local checks, and CI bytes are unchanged."
+  },
+  "primary_package_checks": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "passed": 27,
+    "failed": 0,
+    "metadata_validator": "Skill is valid!",
+    "whitespace_check": "passed"
+  },
+  "historical_evidence": "All three previously committed evidence files remain byte-identical. Their observations are not extended to this revision.",
+  "temporary_command_log_sha256": "4f6685f8011ae46df45c24eb899a19f618eba91a3af6064991f9f93cf90727f0",
+  "limits": "Selected evidence only; the complete temporary project may be removed. Material decisions and retained notice bytes were tested with synthetic terms, not real-world licensing compliance. Font/binary placeholders were not rendered/executed. Runtime checks were not repeated for unchanged code. Hosted CI, fresh hosted review, and owner acceptance remain unverified."
+}

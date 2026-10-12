@@ -11,7 +11,7 @@
 
 **New third-party code, assets, dependencies, and licensing concerns:**
 
-<!-- State none when applicable; otherwise identify additions, sources, licenses or other documented legal bases, and notice records. Disclose unresolved concerns and checks not performed; do not imply unverified compliance. -->
+<!-- Cover all incorporated third-party materials, including non-code assets and dependencies. State none when applicable; otherwise identify additions, sources, licenses or other documented legal bases, and notice records. Disclose unresolved concerns and checks not performed; do not imply unverified compliance. -->
 
 ## Technical Verification
 

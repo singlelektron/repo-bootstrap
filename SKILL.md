@@ -45,7 +45,8 @@ verification proportional to the project rather than prescribing a stack,
 architecture, test framework, or extra services.
 
 Follow the [third-party code and attribution policy](assets/templates/AGENTS.md#third-party-code-and-attribution)
-when researching or reusing implementations. This section is the shared policy
+when researching or incorporating third-party materials, including assets and
+dependencies. This section is the shared policy
 source for bootstrap work and durable project instructions.
 
 Provide relevant CI on PRs and the stable default branch using the existing

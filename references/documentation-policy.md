@@ -10,7 +10,7 @@ Read when creating or adapting project documents.
 | Approved requirements, constraints, non-goals, acceptance criteria | `docs/PRODUCT.md` |
 | Human-readable operation, verification, troubleshooting, recovery | `docs/OWNER_GUIDE.md` |
 | Durable project constraints, sources of truth, commands, authorization boundaries | `AGENTS.md` |
-| Incorporated third-party code, licenses or other legal bases, and sources | Existing notice records or `THIRD_PARTY_NOTICES.md`, when needed |
+| Incorporated third-party materials, licenses or other legal bases, and sources | Existing notice records or `THIRD_PARTY_NOTICES.md`, when needed |
 | Tasks, temporary discussions, change evidence, review history | Issues and PRs; local handoff when unavailable |
 
 Link to the authoritative source instead of copying evolving facts. Add an
