@@ -34,6 +34,18 @@ publication, not merge. The owner may authorize merge in the initial task or aft
 PR review; do not request granted approval again. Once authorized, the agent may
 merge and clean up merged task branches, respecting permissions and protections.
 
+## Third-party code and attribution
+
+- Agents may freely research existing open-source projects, algorithms, architectures, and implementation techniques.
+- Prefer existing libraries over copying implementations when practical.
+- Before copying or adapting substantial third-party code, verify its license and compatibility with this project.
+- Preserve all legally required copyright, license, and attribution notices.
+- Record incorporated third-party code, relevant licenses, and sources in an appropriate location, such as `THIRD_PARTY_NOTICES.md`; preserve existing notice conventions.
+- Do not incorporate code of unknown or incompatible licensing without explicit human approval.
+- Original implementations inspired by general ideas do not require formal attribution, but significant technical influences may be acknowledged voluntarily.
+- Before submitting a PR, report any new third-party code, assets, dependencies, or unresolved licensing concerns.
+- Never claim licensing compliance has been verified when it has not.
+
 ## Checks and acceptance
 
 Run relevant commands from `{{VALIDATION_CONTEXT}}`:

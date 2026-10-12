@@ -9,6 +9,10 @@
 
 **Remaining limitations, risks, or owner decisions:**
 
+**New third-party code, assets, dependencies, and licensing concerns:**
+
+<!-- State none when applicable; otherwise identify additions, sources, licenses, and notice records. Disclose unresolved concerns and checks not performed; do not imply unverified compliance. -->
+
 ## Technical Verification
 
 **Revision and actual checks/results:**

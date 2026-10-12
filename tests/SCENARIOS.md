@@ -20,6 +20,15 @@ Request: Create a Node/JavaScript standard-library project in a temporary direct
 
 Inspect public input/output, empty files, read failures, and reproducible owner steps. Avoid unnecessary frameworks, architecture documents, and empty directories.
 
+Third-party reuse variant: supply a separate synthetic candidate implementation
+of the counter, with an origin note but no license or permission grant. Tell the
+agent it may evaluate that candidate or choose another implementation, without
+granting a licensing exception;
+keep all other scenario A requirements, using the default English documents.
+Inspect the implementation choice, the standalone generated agent instructions,
+and the local PR-style disclosure. This exercises an unknown-license decision,
+not real-world license compatibility or required-notice preservation.
+
 ### B: Persistent-data application
 
 Request: Create a Python standard-library pantry-notes CLI in a temporary directory. Add Chinese entries and list them in later processes; select the data file explicitly. Missing files may initialize; existing corrupt files must produce an error without overwriting their bytes. Target Linux and explicitly use Chinese usage and backup/recovery instructions. Include tests, CI, and local commits. Use disposable data only, without a remote.
@@ -155,6 +164,35 @@ saved to the local evidence directory. The retained artifact contains the full
 not represent a rerun of the earlier 20 checks. The validator implementation is
 unchanged. Hosted CI and review of the Skill change are reported in its PR rather
 than inferred from these local results.
+
+## Third-party attribution rerun (2026-10-12)
+
+An independent agent ran the scenario A variant with default English documents
+and a synthetic candidate whose origin note supplied no license or permission
+grant. The request explicitly granted no licensing exception before project
+artifacts were generated. Only disposable local work was authorized.
+
+Project: `/tmp/repo-bootstrap-attribution-20261012/project`; branch
+`codex/word-count-cli`; commit `19ae806a3213008c8e605fec5024108ac9b97594`.
+The agent excluded the candidate, wrote a distinct streaming implementation, and
+disclosed the unresolved candidate licensing in its local handoff. The generated
+AGENTS retained all nine third-party rules without depending on the installed
+Skill, and its PR template included the disclosure field. No empty notices file
+was created. The supplied source remained byte-identical.
+
+All 12 CLI tests passed on Node 26.11.1; the helper returned
+`passed_with_local_checks`. Three initial sandbox attempts failed because Node
+child-process spawning returned `EPERM`; the same checks passed after approved
+escalation. The primary agent separately checked fresh Unicode, empty, and missing
+files, unchanged input bytes, generated instructions, snapshot hashes, the final
+commit, and clean Git state. No remote was configured.
+
+[Retained evidence](evidence/third-party-attribution-2026-10-12.json) includes the
+exact request and clarification, selected command output, policy snapshot hashes,
+generated instructions and handoff, and primary checks. All 27 Skill tests and
+the official metadata validator passed; independent review found no remaining
+actionable policy issues. The scenario does not verify real license compatibility,
+copying with required-notice preservation, hosted CI, or human acceptance.
 
 ## Evidence limits
 
